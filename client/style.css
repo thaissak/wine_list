@@ -1,0 +1,221 @@
+@import 'https://fonts.googleapis.com/css?family=Denk+One';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+/*-----------------RESET-----------------*/
+
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 16px;
+	font-family: 'Source Sans Pro', Sans-Serif;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+ul li{
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button{
+	box-shadow: none;
+	border: none;
+	background-color: inherit;
+	color: inherit;
+}
+
+/*-----------------GENERAL-----------------*/
+
+/*Page titles*/
+h2{
+	font-family: Helvetica;
+	font-size: 1.5em;
+	letter-spacing: 1px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/*h4 - Error msgs, profile fields(show and edit)*/
+/*label - all forms*/
+h4 label{
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+/*fields name for all forms*/
+span{
+	font-weight: bolder;
+	letter-spacing: 1px;
+}
+
+/*all error msgs when submiting form*/
+.error_msg{
+	color: red;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+button{
+	font-size: 1em;
+	padding: 5px 10px;
+	background-color: #d3d3d3;
+	border-radius: 5px; 
+}
+
+/*-----------------HEADER-----------------*/
+
+header{
+	width: 100%;
+}
+
+h1{
+	font-family: 'Denk One', Sans-Serif;
+	font-size: 3em;
+	letter-spacing: 2px;
+	margin-left: 2%;
+	width: 18%;
+}
+
+header h1{
+	display: inline-block;
+
+}
+
+.linksTop{
+	display: inline-block;
+	width: 79%;
+}
+
+.logout{
+	margin-left: 95%;
+}
+
+.navbar ul{
+	width: 33%;
+	margin-left: 68%;
+}
+
+.navbar ul li{
+	display: inline-block;
+	padding: 10px;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+/*-----------------LOGIN-----------------*/
+
+.loginForm{
+	width: 45%;
+	margin: 2% 40%;
+}
+
+.loginForm label{
+	display: block;
+	margin: 15px 0;
+}
+
+.loginForm input{
+	width: 45%;
+	display: block;
+	border-radius: 5px;
+	box-shadow: none;
+	font-size: 1em;
+}
+
+.loginForm button{
+	margin-left: 36%;
+}
+
+/*-----------------REGISTRATION-----------------*/
+
+.registerForm{
+	width: 41%;
+	margin: 2% 30%;
+}
+
+.registerForm label{
+	display: block;
+	margin: 15px 0;
+}
+
+.registerForm input{
+	font-size: 1em;
+	width: 65%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.registerForm button{
+	margin-left: 90%;
+}
+
+/*-----------------PROFILE-----------------*/
+
+.profile{
+	margin-bottom: 5%;
+}
+
+.profileForm{
+	width: 40%;
+	margin: 2% 30%;
+}
+
+.profile a{
+	font-size: 1em;
+	padding: 5px 10px;
+	background-color: #d3d3d3;
+	border-radius: 5px;
+}
+
+.profileForm label, .pwdForm label{
+	display: block;
+	margin: 15px 0;
+}
+
+.profileForm input{
+	font-size: 1em;
+	width: 65%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.profileForm h4{
+	margin:0;
+}
+
+.btnBox{
+	margin-left: 45%;
+}
+
+.pwdForm{
+	width: 45%;
+	margin: 2% 40%;
+}
+
+.pwdForm input{
+	width: 45%;
+	display: block;
+	border-radius: 5px;
+	box-shadow: none;
+	font-size: 1em;
+}
+
+
+
+
+

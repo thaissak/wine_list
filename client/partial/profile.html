@@ -1,0 +1,41 @@
+<header>
+    <h1>Wine Geek</h1>
+    <div class="linksTop">
+        <a class="logout" href="#">logout</a>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#/Home">Home</a>
+                </li>
+                <li>
+                    <a href="#/Wines">Wines</a>
+                </li>
+                <li>
+                    <a href="#/Wineries">Wineries</a>
+                </li>
+                <li>
+                    <a href="#/Lists">Lists</a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+<div class="profile">
+    <h2>Profile</h2>
+    <div class="profileForm">
+        <h4><span>First Name:</span> {{ user.firstName }}</h4>
+        <h4><span>Last Name:</span> {{ user.lastName }}</h4>
+        <h4><span>E-mail:</span> {{ user.email }}</h4>
+        <h4><span>Address:</span> {{ user.address }}</h4>
+        <h4><span>City:</span> {{ user.city }}</h4>
+        <h4><span>State:</span> {{ user.state }}</h4>
+        <h4><span>Favorite Wine:</span> {{ user.favWine }}</h4>
+        <h4><span>Favorite Winery:</span> {{ user.favWinery }}</h4>
+    </div>
+    <div class="btnBox">
+        <a href="#/Profile/Edit">Edit</a>
+        <a href="#/Profile/Edit/Password">Change Password</a>
+    </div>
+</div>
+

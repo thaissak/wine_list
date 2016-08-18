@@ -1,0 +1,53 @@
+<header>
+    <h1>Wine Geek</h1>
+    <div class="linksTop">
+        <nav class="navbar">
+            <ul>
+            	<li>
+                    <a href="#/">Back</a>
+                </li>
+                <li>
+                    <a href="#/Login">Login</a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+<h2>Registration</h2>
+
+<h4 class="error_msg">{{ error }}</h4>
+
+<form class="registerForm">
+	<label>
+		First Name:<input type="text" ng-model="newUser.firstName"></input>
+	</label>
+	<label>
+		Last Name:<input type="text" ng-model="newUser.lastName"></input>
+	</label>
+	<label>
+		E-mail:<input type="text" ng-model="newUser.email"></input>
+	</label>
+	<label>
+		Password: <input type="password" ng-model="newUser.password"></input>
+	</label>
+	<label>
+		 Confirm Password: <input type="password" ng-model="newUser.confPwd"></input>
+	</label>
+	<label>
+		Address:<input type="text" ng-model="newUser.address"></input>
+	</label>
+	<label>
+		City:<input type="text" ng-model="newUser.city"></input>
+	</label>
+	<label>
+		State:<input type="text" ng-model="newUser.state"></input>
+	</label>
+	<label>
+		What's your favorite Wine?:<input type="text" ng-model="newUser.favWine"></input>
+	</label>
+	<label>
+		What's your favorite Winery?: <input type="text" ng-model="newUser.favWinery"></input>
+	</label>
+	<button type="submit" ng-click="addUser()">Save</button>
+</form>

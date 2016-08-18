@@ -1,0 +1,29 @@
+<header>
+    <h1>Wine Geek</h1>
+    <div class="linksTop">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#/">Back</a>
+                </li>
+                <li>
+                    <a href="#/Registration">Register</a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+<h2>Login</h2>
+
+<h4 class="error_msg">{{ error }}</h4>
+
+<form class="loginForm">
+	<label>
+		E-mail:<input type="text" ng-model="userLogin.email">
+	</label>
+	<label>
+		Password:<input type="password" ng-model="userLogin.password">
+	</label>
+	<button type="submit" ng-click="loginUser()">Login</button>
+</form>

@@ -1,0 +1,63 @@
+<header>
+    <h1>Wine Geek</h1>
+    <div class="linksTop">
+        <a class="logout" href="#">logout</a>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#/Home">Home</a>
+                </li>
+                <li>
+                    <a href="#/Profile">Profile</a>
+                </li>
+                <li>
+                    <a href="#/Wineries">Wineries</a>
+                </li>
+                <li>
+                    <a href="#/Lists">Lists</a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+<div class="wrapper">
+    <h2>Wines</h2>
+
+    <div class="boxLeft">
+        <div class="recentList">
+            <h3>Recently Added</h3>
+            <ul>
+                <li>
+                    <a href="#/Wines/Show">Wine Name, Year</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="favList">
+            <h3>Your Favorites</h3>
+            <ul>
+                <li>
+                    <a href="#/Wines/Show">Wine Name, Score</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="boxRight">
+        <div class="wineTopLink">
+            <input type="text" ng-model="filter_wines" placeholder="Search"></input>
+            <a class="btnAdd" href="#/Wines/New">Add New</a>
+        </div>
+        <h3>All Wines</h3>
+        <ul>
+        <!-- "ng-repeat="wine in wines | orderBy:'name' | filter: filter_wines" -->
+            <li>
+                <a href="#/Wines/Show">Wine Name, Variety, Year from Winery Name</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,65 @@
+<header>
+    <h1>Wine Geek</h1>
+    <div class="linksTop">
+        <a class="logout" href="#">logout</a>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#/Home">Home</a>
+                </li>
+                <li>
+                    <a href="#/Profile">Profile</a>
+                </li>
+                <li>
+                    <a href="#/Wines">Wines</a>
+                </li>
+                <li>
+                    <a href="#/Lists">Lists</a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+<div class="wrapper">
+    <h2>Wineries</h2>
+    <a class="btnAdd wineryAdd" href="#/Wineries/New">Add New</a>
+
+        <div class="wineryList">
+            <ul>
+            <!-- "ng-repeat="winery in wineries | orderBy:'name'" -->
+                <li class="wineryBox">
+                    <div class="inBoxLeft">
+                        <a href="#/Wineries/Show">Winery Name</a>
+                        <h4>{{ location }}</h4>
+                    </div>
+                    <div class="maps"><img src="assets/map.png"></div>
+                </li>
+                <li class="wineryBox">
+                    <div class="inBoxLeft">
+                        <a href="#/Wineries/Show">Winery Name</a>
+                        <h4>{{ location }}</h4>
+                    </div>
+                    <div class="maps"><img src="assets/map.png"></div>
+                </li>
+                <li class="wineryBox">
+                    <div class="inBoxLeft">
+                        <a href="#/Wineries/Show">Winery Name</a>
+                        <h4>{{ location }}</h4>
+                    </div>
+                    <div class="maps"><img src="assets/map.png"></div>
+                </li>
+                <li class="wineryBox">
+                    <div class="inBoxLeft">
+                        <a href="#/Wineries/Show">Winery Name</a>
+                        <h4>{{ location }}</h4>
+                    </div>
+                    <div class="maps"><img src="assets/map.png"></div>
+                </li>
+            </ul>
+        </div>
+
+</div>
+
+
+

@@ -1,5 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Denk+One';
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+@import 'https://fonts.googleapis.com/css?family=Architects+Daughter';
+
 /*-----------------RESET-----------------*/
 
 body{
@@ -75,6 +77,41 @@ button{
 	border-radius: 5px; 
 }
 
+/*anchor tag into button*/
+.btnBox a{
+	font-size: 1em;
+	padding: 5px 10px;
+	background-color: #d3d3d3;
+	border-radius: 5px;
+}
+
+/*Add button for wines, winery and list*/
+.btnAdd{
+	font-size: 1em;
+	padding: 5px 10px;
+	background-color: #d3d3d3;
+	border-radius: 5px;
+/*	margin-left: 90%;*/
+}
+
+/*all forms*/
+form label{
+	display: block;
+	margin: 15px 0;
+}
+
+/*all forms*/
+form input{
+	font-size: 1em;
+	font-family: 'Architects Daughter';
+}
+
+/*wines, wineries and lists*/
+.wrapper{
+	width: 60%;
+	margin: 0 20%;
+}
+
 /*-----------------HEADER-----------------*/
 
 header{
@@ -124,17 +161,11 @@ header h1{
 	margin: 2% 40%;
 }
 
-.loginForm label{
-	display: block;
-	margin: 15px 0;
-}
-
 .loginForm input{
 	width: 45%;
 	display: block;
 	border-radius: 5px;
 	box-shadow: none;
-	font-size: 1em;
 }
 
 .loginForm button{
@@ -148,13 +179,7 @@ header h1{
 	margin: 2% 30%;
 }
 
-.registerForm label{
-	display: block;
-	margin: 15px 0;
-}
-
 .registerForm input{
-	font-size: 1em;
 	width: 65%;
 	border: none;
 	border-bottom: 1px solid black;
@@ -175,20 +200,7 @@ header h1{
 	margin: 2% 30%;
 }
 
-.profile a{
-	font-size: 1em;
-	padding: 5px 10px;
-	background-color: #d3d3d3;
-	border-radius: 5px;
-}
-
-.profileForm label, .pwdForm label{
-	display: block;
-	margin: 15px 0;
-}
-
 .profileForm input{
-	font-size: 1em;
 	width: 65%;
 	border: none;
 	border-bottom: 1px solid black;
@@ -212,8 +224,128 @@ header h1{
 	display: block;
 	border-radius: 5px;
 	box-shadow: none;
-	font-size: 1em;
 }
+
+
+/*-----------------WINES-----------------*/
+
+.boxLeft{
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 3%;
+}
+
+.recentList, .favList{
+	padding: 5%;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.recentList{
+	margin-bottom: 3%;
+}
+
+.recentList h3, .favList h3{
+	margin: 0;
+}
+
+.boxRight{
+	width: 71%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.wineTopLink{
+	width: 60%;
+	margin-left: 47%;
+	margin-bottom: 3%;
+}
+
+.wineTopLink input{
+	display: inline-block;
+	font-size: 1em;
+	width: 60%;
+	margin-right: 3%;
+}
+
+.wineTopLink a{
+	font-size: 1em;
+	padding: 5px 10px;
+	background-color: #d3d3d3;
+	border-radius: 5px;
+}
+
+ul{
+	width: 100%;
+}
+
+.newWineForm, .wineInfo, .editWineForm{
+	width: 60%;
+	margin: 3% 20%;
+}
+
+.newWineForm input, .editWineForm input{
+	width: 65%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.btnBox form {
+	display: inline-block;
+}
+
+
+/*-----------------WINERIES-----------------*/
+
+.wineryAdd{
+	margin-left: 88%;
+}
+
+.wineryList{
+	width: 100%;
+	text-align: center;
+}
+
+.wineryBox{
+	width: 45%;
+	border: 1px solid black;
+	border-radius: 0px 20px 0px 20px;
+	display: inline-block;
+	margin-left: 2%;
+	margin-bottom: 2%;
+}
+
+.inBoxLeft{
+	display: inline-block;
+	width: 45%;
+	margin-right: 3%;
+	vertical-align: top;
+	padding-top: 1%;
+
+}
+
+.maps{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+.maps img{
+	width: 70%;
+}
+
+.newWineryForm input, .editWineryForm input{
+	width: 65%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.newWineryForm, .wineryInfo, .editWineryForm{
+	width: 60%;
+	margin: 3% 20%;
+}
+
 
 
 

@@ -1,0 +1,64 @@
+<header>
+    <h1>Wine Geek</h1>
+    <div class="linksTop">
+        <a class="logout" href="#">logout</a>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#/Home">Home</a>
+                </li>
+                <li>
+                    <a href="#/Profile">Profile</a>
+                </li>
+                <li>
+                    <a href="#/Wineries">Wineries</a>
+                </li>
+                <li>
+                    <a href="#/Lists">Lists</a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+<div class="wrapper">
+    <h2>{{ wine.name }}</h2>
+    <div class="wineInfo">
+        <h4><span>Year:</span> {{ wine.year }}</h4>
+        <h4><span>Variety:</span> {{ wine.variety }}</h4>
+        <h4><span>Region:</span> {{ wine.region }}</h4>
+        <h4><span>Winery:</span> {{ wine.winery }}</h4>
+        <h4><span>Vintage:</span> {{ wine.vintage }}</h4>
+
+        <h3>General Characteristics</h3>
+            <h4><span>Color:</span> {{ wine.color }}</h4>
+            <h4><span>Grape:</span> {{ wine.grape }}</h4>
+            <h4><span>Aroma:</span> {{ wine.aroma }}</h4>
+            <h4><span>Flavor:</span> {{ wine.flavor }}</h4>
+            <h4><span>Finish:</span> {{ wine.finish }}</h4>
+
+
+        <h3>Taste Profile</h3>
+            <h4><span>Acidity:</span> {{ wine.acidity }}</h4> 
+            <h4><span>Tannin:</span> {{ wine.tannin }}</h4>
+            <h4><span>Fruit:</span> {{ wine.fruit }}</h4>
+            <h4><span>Body:</span> {{ wine.body }}</h4>
+            <h4><span>Sweetness:</span> {{ wine.sweetness }}</h4>
+            <h4><span>Alcohol:</span> {{ wine.alcohol }}</h4>
+
+
+        <h3>Review</h3>
+            <h4><span>Score:</span> {{ wine.review }}</h4> 
+            <h4><span>Comments:</span> {{ wine.comment }}</h4>
+
+    </div>
+        <div class="btnBox">  
+            <a href="#/Wines">Back</a>          
+            <a href="#/Wines/Edit">Edit</a>
+            <form>
+                <input type="hidden" name="id" ng-model="">
+                <button type="submit" ng-click="">Delete</button>
+            </form>
+        </div>
+</div>
+

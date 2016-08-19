@@ -102,8 +102,10 @@ form label{
 
 /*all forms*/
 form input{
-	font-size: 1em;
+	font-size: 1.1em;
 	font-family: 'Architects Daughter';
+	letter-spacing: 2px;
+    margin-left: 2px;
 }
 
 /*wines, wineries and lists*/

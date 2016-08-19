@@ -66,7 +66,7 @@ app.config(function($routeProvider){
 //WINERIES
 	.when('/Wineries', {
 		templateUrl: 'partial/winery.html',
-		controller: 'wineriesController'
+		controller: 'wineryController'
 	})
 
 	.when('/Wineries/New', {

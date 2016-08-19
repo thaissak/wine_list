@@ -27,89 +27,89 @@
         <form>
             <label>
                 <span>Name:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWine.name"></input>
             </label>
             <label>
                 <span>Year:</span>
-                <input type="year" ng-model=""></input>
+                <input type="year" ng-model="newWine.year"></input>
             </label>
             <label>
                 <span>Variety:</span> 
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWine.variety"></input>
             </label>
             <label>
                 <span>Region:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWine.region"></input>
             </label>
             <label>
                 <span>Winery:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWine.winery"></input>
             </label>
             <label>
                 <span>Vintage:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWine.vintage"></input>
             </label>
 
             <h3>General Characteristics</h3>
                 <label>
                     <span>Color:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.color"></input>
                 </label>
                 <label>
                     <span>Grape:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.grape"></input>
                 </label>
                 <label>
                     <span>Aroma:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.aroma"></input>
                 </label>
                 <label>
                     <span>Flavor:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.flavor"></input>
                 </label>
                 <label>
                     <span>Finish:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.finish"></input>
                 </label>
 
             <h3>Taste Profile</h3>
                 <label>
                     <span>Acidity:</span> 
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.acidity"></input>
                 </label>
                 <label>
                     <span>Tannin:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.tannin"></input>
                 </label>
                 <label>
                     <span>Fruit:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.fruit"></input>
                 </label>
                 <label>
                     <span>Body:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.body"></input>
                 </label>
                 <label>
                     <span>Sweetness:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.sweetness"></input>
                 </label>
                 <label>
                     <span>Alcohol:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.alcohol"></input>
                 </label>
 
             <h3>Review</h3>
                 <label>
                     <span>Score:</span> 
-                    <input type="text" ng-model=""></input>
+                    <input type="number" ng-model="newWine.score"></input>
                 </label>
                 <label>
                     <span>Comments:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWine.comment"></input>
                 </label>
         </div>
         <div class="btnBox">
-            <button type="submit" ng-click="">Save</button>
+            <button type="submit" ng-click="addWine()">Save</button>
             <a href="#/Wines">Cancel</a>
         </div>
     </form>

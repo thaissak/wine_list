@@ -27,45 +27,45 @@
         <form>
             <label>
                 <span>Name:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWinery.name"></input>
             </label>
             <label>
                 <span>Region:</span>
-                <input type="year" ng-model=""></input>
+                <input type="year" ng-model="newWinery.region"></input>
             </label>
             <label>
                 <span>City:</span> 
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWinery.city"></input>
             </label>
             <label>
                 <span>State:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWinery.state"></input>
             </label>
             <label>
                 <span>Country:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWinery.country"></input>
             </label>
             <label>
                 <span>Specialty:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="newWinery.specialty"></input>
             </label>
             <label>
                 <span>Visited in:</span>
-                <input type="date" ng-model=""></input>
+                <input type="date" ng-model="newWinery.visit_date"></input>
             </label>
 
             <h3>Review</h3>
                 <label>
                     <span>Score:</span> 
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWinery.score"></input>
                 </label>
                 <label>
                     <span>Comments:</span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="newWinery.comment"></input>
                 </label>
     </div>
         <div class="btnBox">
-            <button type="submit" ng-click="">Save</button>
+            <button type="submit" ng-click="addWinery()">Save</button>
             <a href="#/Wineries">Cancel</a>
         </div>
         </form>

@@ -6,7 +6,7 @@ app = express();
 
 var bodyParser = require('body-parser');
 
-var db = require('./server/config/db.js');
+var db = require('./server/controller/users.js');
 
 var routes = require('./server/config/routes.js');
 

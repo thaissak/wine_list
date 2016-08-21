@@ -3,21 +3,21 @@ module.exports = function(app){
 	var wines = require('../controller/wines.js');
 	var wineries = require('../controller/wineries.js');
 
-	app.post('/user/new', function(req,res){
+	app.post('/users', function(req,res){
 		users.addUser(req,res);
 	})
 
-	// app.post('/user/login', function(req,res){
-	// 	users.login(req,res);
-	// })
+	app.post('/users/login', function(req,res){
+		users.login(req,res);
+	})
 
-	// app.get('/user/show', function(req,res){
-	// 	users.getUser(req,res);
-	// })
+	app.get('/users/:id', function(req,res){
+		users.userInfo(req,res);
+	})
 
-	// app.post('/user/update', function(req,res){
-	// 	users.updateUser(req,res);
-	// })
+	app.post('/users/:id', function(req,res){
+		users.updateUser(req,res);
+	})
 
 	// app.get('/wines', function(req,res){
 	// 	wines.getAllWines(req,res);

@@ -1,20 +1,21 @@
-app.controller('userController', ['$scope', 'userFactory', '$routeParams', '$location', function($scope, userFactory, $routeParams, $location){
+app.controller('userController', ['$scope', 'userFactory', '$location', '$cookies', function($scope, userFactory, $location, $cookies){
 
-	$scope.user = [];
-	var user_id = $routeParams.id;
+	$scope.user = {} ;
 
-	$scope.addUser = function(){
-		console.log('pwd', $scope.newUser.password, 'confpwd', $scope.newUser.confPwd);
-		if($scope.newUser.password == $scope.newUser.confPwd){
-			userFactory.addUser($scope.newUser, function(data){
-				$scope.user = data;
-				console.log("in adduser controller", data);
-				$location.path('/Home');
-			})
-		}
-		else{
-			$scope.error = "Passwords don't match. Please try again!";
-		}
+	userFactory.userInfo($cookies.get('user_id'), function(userData){
+		console.log('in logged user controller', userData);
+		$scope.user = userData;
+	});
+
+	$scope.updateUser = function(){
+		userFactory.updateUser($scope.user, function(data){
+			if(data.update == true){
+				$location.path('/Profile');
+			}
+			else{
+				$scope.error = "There was an error trying to update your profile. Please try again.";
+			}
+		});
 	};
 
 }]);

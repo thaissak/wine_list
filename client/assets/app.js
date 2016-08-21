@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'ngCookies']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -6,17 +6,17 @@ app.config(function($routeProvider){
 // MAIN	
 	.when('/', {
 		templateUrl: 'partial/main.html',
-		controller: 'userController'
+		
 	})
 
 	.when('/Registration', {
 		templateUrl: 'partial/registration.html',
-		controller: 'userController'
+		controller: 'loginController'
 	})
 
 	.when('/Login', {
 		templateUrl: 'partial/login.html',
-		controller: 'userController'
+		controller: 'loginController'
 	})
 
 // LOGGED USER

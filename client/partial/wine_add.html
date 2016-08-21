@@ -1,7 +1,7 @@
 <header>
     <h1>Wine Geek</h1>
-    <div class="linksTop">
-        <a class="logout" href="#">logout</a>
+    <div class="linksTop" ng-controller="loginController">
+        <a class="logout" href="/#/" ng-click="logout()">logout</a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -27,15 +27,15 @@
         <form>
             <label>
                 <span>Name:</span>
-                <input type="text" ng-model="newWine.name"></input>
+                <input type="text" ng-model="newWine.name" required></input>
             </label>
             <label>
                 <span>Year:</span>
-                <input type="year" ng-model="newWine.year"></input>
+                <input type="year" ng-model="newWine.year" required></input>
             </label>
             <label>
                 <span>Variety:</span> 
-                <input type="text" ng-model="newWine.variety"></input>
+                <input type="text" ng-model="newWine.variety" required></input>
             </label>
             <label>
                 <span>Region:</span>

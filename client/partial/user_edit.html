@@ -1,7 +1,7 @@
 <header>
     <h1>Wine Geek</h1>
-    <div class="linksTop">
-        <a class="logout" href="#">logout</a>
+    <div class="linksTop" ng-controller="loginController">
+        <a class="logout" href="/#/" ng-click="logout()">logout</a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -23,42 +23,44 @@
 
 <div class="profile">
     <h2>Profile</h2>
-    <div class="profileForm">
-        <form>
+    <form>
+        <div class="profileForm">
+            <h3>{{error}}</h3>
+            <input type="hidden" ng-model="user.id"></input>
             <label>
                 <span>First Name:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.firstName" value="{{user.firstName}}" required></input>
             </label>
             <label>
                 <span>Last Name:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.lastName" value="{{user.lastName}}" required></input>
             </label>
             <label>                
                 <h4><span>E-mail:</span> {{ user.email }}</h4>
             </label>
             <label>
                 <span>Address:</span> 
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.address" value="{{user.address}}"></input>
             </label>
             <label>
                 <span>City:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.city" value="{{user.city}}"></input>
             </label>
             <label>
                 <span>State:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.state" value="{{user.state}}"></input>
             </label>
             <label>
                 <span>Favorite Wine:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.favWine" value="{{user.favWine}}"></input>
             </label>
             <label>
                 <span>Favorite Winery:</span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="user.favWinery" value="{{user.favWinery}}"></input>
             </label>
         </div>
         <div class="btnBox">
-            <button type="submit" ng-click="">Save</button>
+            <button type="submit" ng-click="updateUser()">Save</button>
             <a href="#/Profile">Cancel</a>
         </div>
     </form>

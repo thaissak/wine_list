@@ -18,4 +18,20 @@ app.controller('userController', ['$scope', 'userFactory', '$location', '$cookie
 		});
 	};
 
+	$scope.changePwd = function(){
+		if($scope.user.newPwd == $scope.user.confPwd){
+			userFactory.changePwd($scope.user, function(data){
+				if(data.update == true){
+					$location.path('/Profile');
+				}
+				else{
+					$scope.error = "There was an error trying to change your password. Please try again.";
+				}
+			});
+		}
+		else{
+			$scope.error = "Passwords don't match. Please try again!"
+		}
+	};
+
 }]);

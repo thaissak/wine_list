@@ -19,6 +19,10 @@ module.exports = function(app){
 		users.updateUser(req,res);
 	})
 
+	app.post('/users/:userId/change_pwd', function(req,res){
+		users.changePwd(req,res);
+	})
+
 	app.get('/users/:userId/wines', function(req,res){
 		wines.getAllWines(req,res);
 	})

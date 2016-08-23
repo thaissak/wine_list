@@ -31,6 +31,14 @@ app.factory('userFactory', function($http){
 			console.log('got update response back from server', data.data);
 			callback(data.data);
 		});
+	},
+
+	factory.changePwd = function(data, callback){
+		console.log('in change pwd factory', data);
+		$http.post('/users/'+data.id+'/change_pwd', data).then(function(data){
+			console.log('got pwd update back from server', data.data);
+			callback(data.data);
+		});
 	}
 
 	return factory;

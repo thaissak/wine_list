@@ -68,6 +68,7 @@ function WineriesController(){
 
 	this.updateWinery = function(req,res){
 		console.log('user id:', req.params.userId, 'winery info:', req.body);
+		console.log('visited at:', new Date(req.body.visited_at));
 		var myQuery = 'UPDATE wineries SET name = "'+req.body.name+'", region = "'+req.body.region+'", city = "'+req.body.city+'", state = "'+req.body.state+'", country = "'+req.body.country+'", visited_at = "'+req.body.visited_at+'", score = "'+req.body.score+'", comment = "'+req.body.comment+'", updated_at = NOW() WHERE id='+req.body.id;
 		con.query(myQuery, function(err, data){
 			// console.log(con.query(myQuery));

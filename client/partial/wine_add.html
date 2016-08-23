@@ -25,6 +25,7 @@
     <h2>New Wine</h2>
     <div class="newWineForm">
         <form>
+        <input type="hidden" ng-model="newWine.user_id" value="{{userId}}"></input>
             <label>
                 <span>Name:</span>
                 <input type="text" ng-model="newWine.name" required></input>
@@ -107,6 +108,7 @@
                     <span>Comments:</span>
                     <input type="text" ng-model="newWine.comment"></input>
                 </label>
+
         </div>
         <div class="btnBox">
             <button type="submit" ng-click="addWine()">Save</button>

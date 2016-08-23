@@ -26,33 +26,11 @@
     <a class="btnAdd wineryAdd" href="#/Wineries/New">Add New</a>
 
         <div class="wineryList">
-            <ul>
-            <!-- "ng-repeat="winery in wineries | orderBy:'name'" -->
+            <ul ng-repeat="winery in wineries | orderBy:'name'">
                 <li class="wineryBox">
                     <div class="inBoxLeft">
-                        <a href="#/Wineries/Show">Winery Name</a>
-                        <h4>{{ location }}</h4>
-                    </div>
-                    <div class="maps"><img src="assets/map.png"></div>
-                </li>
-                <li class="wineryBox">
-                    <div class="inBoxLeft">
-                        <a href="#/Wineries/Show">Winery Name</a>
-                        <h4>{{ location }}</h4>
-                    </div>
-                    <div class="maps"><img src="assets/map.png"></div>
-                </li>
-                <li class="wineryBox">
-                    <div class="inBoxLeft">
-                        <a href="#/Wineries/Show">Winery Name</a>
-                        <h4>{{ location }}</h4>
-                    </div>
-                    <div class="maps"><img src="assets/map.png"></div>
-                </li>
-                <li class="wineryBox">
-                    <div class="inBoxLeft">
-                        <a href="#/Wineries/Show">Winery Name</a>
-                        <h4>{{ location }}</h4>
+                        <a href="#/Wineries/Show/{{winery.id}}">{{winery.name}}</a>
+                        <h4>{{ winery.region }}, {{ winery.state }}</h4>
                     </div>
                     <div class="maps"><img src="assets/map.png"></div>
                 </li>

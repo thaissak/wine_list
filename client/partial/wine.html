@@ -23,22 +23,22 @@
 
 <div class="wrapper">
     <h2>Wines</h2>
-
+    <h3>{{msg}}</h3>
     <div class="boxLeft">
         <div class="recentList">
             <h3>Recently Added</h3>
-            <ul>
+            <ul ng-repeat="wine in wines">
                 <li>
-                    <a href="#/Wines/Show">Wine Name, Year</a>
+                    <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.year}}</a>
                 </li>
             </ul>
         </div>
 
         <div class="favList">
             <h3>Your Favorites</h3>
-            <ul>
+            <ul ng-repeat="wine in wines">
                 <li>
-                    <a href="#/Wines/Show">Wine Name, Score</a>
+                    <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.score}}</a>
                 </li>
             </ul>
         </div>
@@ -50,10 +50,9 @@
             <a class="btnAdd" href="#/Wines/New">Add New</a>
         </div>
         <h3>All Wines</h3>
-        <ul>
-        <!-- "ng-repeat="wine in wines | orderBy:'name' | filter: filter_wines" -->
+        <ul ng-repeat="wine in wines | orderBy:'name' | filter: filter_wines">
             <li>
-                <a href="#/Wines/Show">Wine Name, Variety, Year from Winery Name</a>
+                <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.variety}}, {{wine.year}} from {{wine.winery}}</a>
             </li>
         </ul>
     </div>

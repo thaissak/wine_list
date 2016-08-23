@@ -24,23 +24,22 @@
 <div class="wrapper">
     <h2>{{ winery.name }}</h2>
     <div class="wineryInfo">
-        <h4><span>Region:</span> </h4>
-        <h4><span>City:</span> </h4>
-        <h4><span>State:</span> </h4>
-        <h4><span>Country:</span> </h4>
-        <h4><span>Specialty:</span> </h4>
-        <h4><span>Visited in:</span> </h4>
+        <h4><span>Region:</span>{{ winery.region }}</h4>
+        <h4><span>City:</span>{{ winery.city }}</h4>
+        <h4><span>State:</span>{{ winery.state }}</h4>
+        <h4><span>Country:</span>{{ winery.country }}</h4>
+        <h4><span>Specialty:</span>{{ winery.specialty }}</h4>
+        <h4><span>Visited in:</span>{{ winery.visited_at }}</h4>
 
         <h3>Review</h3>
-            <h4><span>Score:</span> </h4> 
-            <h4><span>Comments:</span> </h4>
+            <h4><span>Score:</span>{{ winery.score }}</h4> 
+            <h4><span>Comments:</span>{{ winery.comment }}</h4>
     </div>
         <div class="btnBox">  
             <a href="#/Wineries">Back</a>          
-            <a href="#/Wineries/Edit">Edit</a>
+            <a href="#/Wineries/Edit/{{winery.id}}">Edit</a>
             <form>
-                <input type="hidden" name="id" ng-model="">
-                <button type="submit" ng-click="">Delete</button>
+                <button type="submit" ng-click="deleteWinery()">Delete</button>
             </form>
         </div>
 </div>

@@ -48,16 +48,15 @@
 
 
         <h3>Review</h3>
-            <h4><span>Score:</span> {{ wine.review }}</h4> 
+            <h4><span>Score:</span> {{ wine.score }}</h4> 
             <h4><span>Comments:</span> {{ wine.comment }}</h4>
 
     </div>
         <div class="btnBox">  
             <a href="#/Wines">Back</a>          
-            <a href="#/Wines/Edit">Edit</a>
+            <a href="#/Wines/Edit/{{wine.id}}">Edit</a>
             <form>
-                <input type="hidden" name="id" ng-model="">
-                <button type="submit" ng-click="">Delete</button>
+               <button type="submit" ng-click="deleteWine()">Delete</button>
             </form>
         </div>
 </div>

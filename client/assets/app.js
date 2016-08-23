@@ -44,20 +44,20 @@ app.config(function($routeProvider){
 // WINES
 	.when('/Wines', {
 		templateUrl: 'partial/wine.html',
-		controller: 'wineController'
+		controller: 'wineHomeController'
 	})
 
 	.when('/Wines/New', {
 		templateUrl: 'partial/wine_add.html',
-		controller: 'wineController'
+		controller: 'wineAddController'
 	})
 
-	.when('/Wines/Edit', {
+	.when('/Wines/Edit/:id', {
 		templateUrl: 'partial/wine_edit.html',
 		controller: 'wineController'
 	})
 
-	.when('/Wines/Show', {
+	.when('/Wines/Show/:id', {
 		templateUrl: 'partial/wine_show.html',
 		controller: 'wineController'
 	})
@@ -66,20 +66,20 @@ app.config(function($routeProvider){
 //WINERIES
 	.when('/Wineries', {
 		templateUrl: 'partial/winery.html',
-		controller: 'wineryController'
+		controller: 'wineryHomeController'
 	})
 
 	.when('/Wineries/New', {
 		templateUrl: 'partial/winery_add.html',
-		controller: 'wineryController'
+		controller: 'wineryAddController'
 	})
 
-	.when('/Wineries/Edit', {
+	.when('/Wineries/Edit/:id', {
 		templateUrl: 'partial/winery_edit.html',
 		controller: 'wineryController'
 	})
 
-	.when('/Wineries/Show', {
+	.when('/Wineries/Show/:id', {
 		templateUrl: 'partial/winery_show.html',
 		controller: 'wineryController'
 	})

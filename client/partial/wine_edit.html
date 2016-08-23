@@ -23,95 +23,96 @@
 
 <div class="wrapper">
     <h2>Edit Wine</h2>
+    <h3>{{msg}}</h3>
     <div class="editWineForm">
         <form>
             <label>
                 <span>Name: </span>
-                <input type="text" ng-model="" required></input>
+                <input type="text" ng-model="wine.name" value="{{wine.name}}" required></input>
             </label>
             <label>
                 <span>Year: </span>
-                <input type="year" ng-model="" required></input>
+                <input type="year" ng-model="wine.year" value="{{wine.year}}" required></input>
             </label>
             <label>
                 <span>Variety:  </span> 
-                <input type="text" ng-model="" required></input>
+                <input type="text" ng-model="wine.variety" value="{{wine.variety}}" required></input>
             </label>
             <label>
                 <span>Region: </span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="wine.region" value="{{wine.region}}"></input>
             </label>
             <label>
                 <span>Winery: </span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="wine.winery" value="{{wine.winery}}"></input>
             </label>
             <label>
                 <span>Vintage:  </span>
-                <input type="text" ng-model=""></input>
+                <input type="text" ng-model="wine.vintage" value="{{wine.vintage}}"></input>
             </label>
 
             <h3>General Characteristics</h3>
                 <label>
                     <span>Color: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.color" value="{{wine.color}}"></input>
                 </label>
                 <label>
                     <span>Grape: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.grape" value="{{wine.grape}}"></input>
                 </label>
                 <label>
                     <span>Aroma: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.aroma" value="{{wine.aroma}}"></input>
                 </label>
                 <label>
                     <span>Flavor: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.flavor" value="{{wine.flavor}}"></input>
                 </label>
                 <label>
                     <span>Finish: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.finish" value="{{wine.finish}}"></input>
                 </label>
 
             <h3>Taste Profile</h3>
                 <label>
                     <span>Acidity:  </span> 
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.acidity" value="{{wine.acidity}}"></input>
                 </label>
                 <label>
                     <span>Tannin: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.tannin" value="{{wine.tannin}}"></input>
                 </label>
                 <label>
                     <span>Fruit: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.fruit" value="{{wine.fruit}}"></input>
                 </label>
                 <label>
                     <span>Body: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.body" value="{{wine.body}}"></input>
                 </label>
                 <label>
                     <span>Sweetness: </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.sweetness" value="{{wine.sweetness}}"></input>
                 </label>
                 <label>
                     <span>Alcohol:  </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.alcohol" value="{{wine.alcohol}}"></input>
                 </label>
 
             <h3>Review</h3>
                 <label>
                     <span>Score: </span> 
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.score" value="{{wine.score}}"></input>
                 </label>
                 <label>
                     <span>Comments:  </span>
-                    <input type="text" ng-model=""></input>
+                    <input type="text" ng-model="wine.comments" value="{{wine.comments}}"></input>
                 </label>
         </div>
         <div class="btnBox">
-            <button type="submit" ng-click="">Save</button>
+            <button type="submit" ng-click="updateWine()">Save</button>
             <a href="#/Wines">Cancel</a>
-            <a href="#/Wines/Show">Back</a>
+            <a href="#/Wines/Show/{{wine.id}}">Back</a>
         </div>
     </form>
 </div>

@@ -11,51 +11,51 @@ module.exports = function(app){
 		users.login(req,res);
 	})
 
-	app.get('/users/:id', function(req,res){
+	app.get('/users/:userId', function(req,res){
 		users.userInfo(req,res);
 	})
 
-	app.post('/users/:id', function(req,res){
+	app.post('/users/:userId', function(req,res){
 		users.updateUser(req,res);
 	})
 
-	// app.get('/wines', function(req,res){
-	// 	wines.getAllWines(req,res);
-	// })
+	app.get('/users/:userId/wines', function(req,res){
+		wines.getAllWines(req,res);
+	})
 
-	app.post('/wine/new', function(req,res){
+	app.post('/users/:userId/wines', function(req,res){
 		wines.addWine(req,res);
 	})
 
-	// app.get('/wine/show', function(req,res){
-	// 	wines.getWine(req,res);
-	// })
+	app.get('/users/:userId/wines/:wineId', function(req,res){
+		wines.wineInfo(req,res);
+	})
 
-	// app.post('/wine/update', function(req,res){
-	// 	wines.updateWine(req,res);
-	// })
+	app.post('/users/:userId/wines/:wineId', function(req,res){
+		wines.updateWine(req,res);
+	})
 
-	// app.post('/wine/delete', function(req,res){
-	// 	wines.deleteWine(req,res);
-	// })
+	app.delete('/users/:userId/wines/:wineId', function(req,res){
+		wines.deleteWine(req,res);
+	})
 
-	// app.get('/wineries', function(req,res){
-	// 	wines.getAllWines(req,res);
-	// })
+	app.get('/users/:userId/wineries', function(req,res){
+		wineries.getAllWineries(req,res);
+	})
 
-	app.post('/winery/new', function(req,res){
+	app.post('/users/:userId/wineries', function(req,res){
 		wineries.addWinery(req,res);
 	})
 
-	// app.get('/winery/show', function(req,res){
-	// 	wineries.getWinery(req,res);
-	// })
+	app.get('/users/:userId/wineries/:wineryId', function(req,res){
+		wineries.wineryInfo(req,res);
+	})
 
-	// app.post('/winery/update', function(req,res){
-	// 	wineries.updateWinery(req,res);
-	// })
+	app.post('/users/:userId/wineries/:wineryId', function(req,res){
+		wineries.updateWinery(req,res);
+	})
 
-	// app.post('/winery/delete', function(req,res){
-	// 	wineries.deleteWinery(req,res);
-	// })
+	app.delete('/users/:userId/wineries/:wineryId', function(req,res){
+		wineries.deleteWinery(req,res);
+	})
 }

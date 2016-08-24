@@ -23,35 +23,35 @@
 
 <div class="wrapper">
     <h2>Edit Wine</h2>
-    <h3>{{msg}}</h3>
+    <h4 class="error_msg">{{error}}</h4>
     <div class="editWineForm">
         <form>
             <label>
                 <span>Name: </span>
-                <input type="text" ng-model="wine.name" value="{{wine.name}}" required></input>
+                <input type="text" ng-model="wine.name" required></input>
             </label>
             <label>
                 <span>Year: </span>
-                <input type="year" ng-model="wine.year" value="{{wine.year}}" required></input>
+                <input type="number" ng-model="wine.year" required></input>
             </label>
             <label>
                 <span>Variety:  </span> 
-                <input type="text" ng-model="wine.variety" value="{{wine.variety}}" required></input>
+                <input type="text" ng-model="wine.variety" required></input>
             </label>
             <label>
                 <span>Region: </span>
-                <input type="text" ng-model="wine.region" value="{{wine.region}}"></input>
+                <input type="text" ng-model="wine.region"></input>
             </label>
             <label>
                 <span>Winery: </span>
-                <input type="text" ng-model="wine.winery" value="{{wine.winery}}"></input>
+                <input type="text" ng-model="wine.winery"></input>
             </label>
             <label>
                 <span>Vintage:  </span>
-                <input type="text" ng-model="wine.vintage" value="{{wine.vintage}}"></input>
+                <input type="text" ng-model="wine.vintage"></input>
             </label>
 
-            <h3>General Characteristics</h3>
+           <!--  <h3>General Characteristics</h3>
                 <label>
                     <span>Color: </span>
                     <input type="text" ng-model="wine.color" value="{{wine.color}}"></input>
@@ -97,16 +97,16 @@
                 <label>
                     <span>Alcohol:  </span>
                     <input type="text" ng-model="wine.alcohol" value="{{wine.alcohol}}"></input>
-                </label>
+                </label> -->
 
             <h3>Review</h3>
                 <label>
                     <span>Score: </span> 
-                    <input type="text" ng-model="wine.score" value="{{wine.score}}"></input>
+                    <input type="number" max="5" ng-model="wine.score"></input>
                 </label>
                 <label>
                     <span>Comments:  </span>
-                    <input type="text" ng-model="wine.comments" value="{{wine.comments}}"></input>
+                    <input type="text" ng-model="wine.comments"></input>
                 </label>
         </div>
         <div class="btnBox">

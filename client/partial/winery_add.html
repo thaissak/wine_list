@@ -3,7 +3,7 @@
     <div class="linksTop" ng-controller="loginController">
         <a class="logout" href="/#/" ng-click="logout()">logout</a>
         <nav class="navbar">
-            <ul>
+           <ul>
                 <li>
                     <a href="#/Home">Home</a>
                 </li>
@@ -14,7 +14,7 @@
                     <a href="#/Wines">Wines</a>
                 </li>
                 <li>
-                    <a href="#/Lists">Lists</a>
+                    <a href="#/Wineries">Wineries</a>
                 </li>
             </ul>    
         </nav>
@@ -23,6 +23,7 @@
 
 <div class="wrapper">
     <h2>New Winery</h2>
+    <h4 class="error_msg">{{error}}</h4>
     <div class="newWineryForm">
         <form>
             <label>
@@ -57,7 +58,7 @@
             <h3>Review</h3>
                 <label>
                     <span>Score:</span> 
-                    <input type="text" ng-model="newWinery.score"></input>
+                    <input type="number" max="5" ng-model="newWinery.score"></input>
                 </label>
                 <label>
                     <span>Comments:</span>

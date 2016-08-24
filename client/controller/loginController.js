@@ -3,12 +3,22 @@ app.controller('loginController', ['$scope', 'userFactory', '$location', '$cooki
 	$scope.addUser = function(){
 		if($scope.newUser.password == $scope.newUser.confPwd){
 			userFactory.addUser($scope.newUser, function(data){
-				$cookies.put('user_id', data);
-				// console.log("in adduser controller", "data:", data, "cookie:", $cookies.get('user_id'));
-				$location.path('/Home');
+				if(data.id){
+					$cookies.put('user_id', data.id);
+					// console.log("in adduser controller", "data:", data, "cookie:", $cookies.get('user_id'));
+					$location.path('/Home');
+				}
+				else if(data.email == true){
+					$scope.error = "E-mail already registered!";
+				}
+				else if(data.validation == false){
+					$scope.error = "There was an error creating your profile. Please try again.";
+				}
+				
 			})
 		}
 		else{
+			console.log('validation:', $scope.newUser);
 			$scope.error = "Passwords don't match. Please try again!";
 		}
 	};
@@ -20,8 +30,8 @@ app.controller('loginController', ['$scope', 'userFactory', '$location', '$cooki
 				$scope.error = "Login invalid! Please try again or Register."
 			}
 			else{
-				$cookies.put('user_id', data[0].id);
-				console.log("login controller", "data:", data, "cookie:", $cookies.get('user_id'));
+				$cookies.put('user_id', data.id);
+				console.log("login controller", "data:", data.id, "cookie:", $cookies.get('user_id'));
 				$location.path('/Home');
 			}
 		})

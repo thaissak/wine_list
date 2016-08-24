@@ -126,6 +126,7 @@ h1{
 	letter-spacing: 2px;
 	margin-left: 2%;
 	width: 18%;
+	color: #1A0003;
 }
 
 header h1{
@@ -136,10 +137,12 @@ header h1{
 .linksTop{
 	display: inline-block;
 	width: 79%;
+
 }
 
 .logout{
 	margin-left: 95%;
+	color: #370006;
 }
 
 .navbar ul{
@@ -154,6 +157,7 @@ header h1{
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: left;
+	color: #370006;
 }
 
 /*-----------------LOGIN-----------------*/
@@ -285,6 +289,7 @@ ul{
 .newWineForm, .wineInfo, .editWineForm{
 	width: 60%;
 	margin: 3% 20%;
+	
 }
 
 .newWineForm input, .editWineForm input{

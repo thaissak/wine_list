@@ -23,9 +23,10 @@
 
 <div class="wrapper">
     <h2>Wineries</h2>
+    <h4>{{msg}}</h4>
     <a class="btnAdd wineryAdd" href="#/Wineries/New">Add New</a>
 
-        <div class="wineryList">
+        <div class="wineryList" ng-if="show">
             <ul ng-repeat="winery in wineries | orderBy:'name'">
                 <li class="wineryBox">
                     <div class="inBoxLeft">

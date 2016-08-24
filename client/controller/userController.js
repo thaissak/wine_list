@@ -1,6 +1,7 @@
 app.controller('userController', ['$scope', 'userFactory', '$location', '$cookies', function($scope, userFactory, $location, $cookies){
 
 	$scope.user = {} ;
+	$scope.pwd = /^[A-Za-z0-9]\w{5,8}$/;
 
 	userFactory.userInfo($cookies.get('user_id'), function(userData){
 		console.log('in logged user controller', userData);
@@ -19,6 +20,7 @@ app.controller('userController', ['$scope', 'userFactory', '$location', '$cookie
 	};
 
 	$scope.changePwd = function(){
+		console.log('in password validation')
 		if($scope.user.newPwd == $scope.user.confPwd){
 			userFactory.changePwd($scope.user, function(data){
 				if(data.update == true){
@@ -30,6 +32,7 @@ app.controller('userController', ['$scope', 'userFactory', '$location', '$cookie
 			});
 		}
 		else{
+			console.log('in error msg', $error);
 			$scope.error = "Passwords don't match. Please try again!"
 		}
 	};

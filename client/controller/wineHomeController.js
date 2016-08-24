@@ -8,9 +8,11 @@ app.controller('wineHomeController', ['$scope', 'wineFactory', '$routeParams', '
 		console.log('getting all wines controller', wineList);
 		if(wineList.msg){
 			$scope.msg = wineList.msg;
+			$scope.show = wineList.show;
 		}
 		else{
 			$scope.wines = wineList;
+			$scope.show = true;
 			console.log('wine list:', $scope.wines);
 		}
 		

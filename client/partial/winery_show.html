@@ -29,7 +29,7 @@
         <h4><span>State:</span>{{ winery.state }}</h4>
         <h4><span>Country:</span>{{ winery.country }}</h4>
         <h4><span>Specialty:</span>{{ winery.specialty }}</h4>
-        <h4><span>Visited in:</span>{{ winery.visited_at }}</h4>
+        <h4><span>Visited in:</span>{{ winery.visited_at | date:'MM/dd/yyyy' }}</h4>
 
         <h3>Review</h3>
             <h4><span>Score:</span>{{ winery.score }}</h4> 

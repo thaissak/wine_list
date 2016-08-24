@@ -23,46 +23,46 @@
 
 <div class="wrapper">
     <h2>Edit Winery</h2>
-    <h3>{{msg}}</h3>
+    <h4 class="error_msg">{{error}}</h4>
     <div class="editWineryForm">
         <form>
             <label>
                 <span>Name: </span>
-                <input type="text" ng-model="winery.name" value="{{winery.name}}" required></input>
+                <input type="text" ng-model="winery.name" required></input>
             </label>
             <label>
                 <span>Region: </span>
-                <input type="year" ng-model="winery.region" value="{{winery.region}}" required></input>
+                <input type="year" ng-model="winery.region" required></input>
             </label>
             <label>
                 <span>City:  </span> 
-                <input type="text" ng-model="winery.city" value="{{winery.city}}"></input>
+                <input type="text" ng-model="winery.city"></input>
             </label>
             <label>
                 <span>State: </span>
-                <input type="text" ng-model="winery.state" value="{{winery.state}}"></input>
+                <input type="text" ng-model="winery.state"></input>
             </label>
             <label>
                 <span>Country: </span>
-                <input type="text" ng-model="winery.country" value="{{winery.country}}"></input>
+                <input type="text" ng-model="winery.country"></input>
             </label>
             <label>
                 <span>Specialty:  </span>
-                <input type="text" ng-model="winery.specialty" value="{{winery.specialty}}"></input>
+                <input type="text" ng-model="winery.specialty"></input>
             </label>
             <label>
-                <span>Visited in:  </span>
-                <input type="date" ng-model="winery.visited_at" value="{{winery.visited_at}}"></input>
+                <span>Visited in:</span>
+                <input type="text" ng-model="winery.visited_at | date:'MM-dd-yyyy'"></input>
             </label>
 
             <h3>Review</h3>
                 <label>
                     <span>Score: </span> 
-                    <input type="text" ng-model="winery.score" value="{{winery.score}}"></input>
+                    <input type="number" max="5" ng-model="winery.score"></input>
                 </label>
                 <label>
                     <span>Comments:  </span>
-                    <input type="text" ng-model="winery.comment" value="{{winery.comment}}"></input>
+                    <input type="text" ng-model="winery.comment"></input>
                 </label>
         </div>
         <div class="btnBox">

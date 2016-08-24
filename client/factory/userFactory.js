@@ -4,8 +4,8 @@ app.factory('userFactory', function($http){
 
 	factory.addUser = function(data, callback){
 		$http.post('/users', data).then(function(result){
-			console.log('Inserted new user into db', result.data.id);
-			callback(result.data.id);
+			console.log('Inserted new user into db', result.data);
+			callback(result.data);
 		});
 	},
 

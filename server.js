@@ -1,12 +1,14 @@
 var express = require('express');
 
+var bcrypt = require('bcrypt');
+
 path = require('path');
 
 app = express();
 
 var bodyParser = require('body-parser');
 
-var db = require('./server/controller/users.js');
+var db = require('./server/config/db.js');
 
 var routes = require('./server/config/routes.js');
 

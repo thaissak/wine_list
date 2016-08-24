@@ -32,7 +32,7 @@ app.controller('wineController', ['$scope', 'wineFactory', '$routeParams', '$loc
 			}
 			else{
 				console.log('wine not updated', data);
-				$scope.msg = "There was an error editing this wine. Please try again.";
+				$scope.error = "There was an error editing this wine. Please try again.";
 			}
 		})
 	};

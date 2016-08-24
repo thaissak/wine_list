@@ -23,11 +23,14 @@
 
 <div class="wrapper">
     <h2>Wines</h2>
-    <h3>{{msg}}</h3>
-    <div class="boxLeft">
+    <div ng-if="msg">
+        <h3>{{msg}}</h3>
+        <a class="btnAdd" href="#/Wines/New">Add New</a>         
+    </div>
+    <div class="boxLeft" ng-if="show">
         <div class="recentList">
             <h3>Recently Added</h3>
-            <ul ng-repeat="wine in wines">
+            <ul ng-repeat="wine in wines | limitTo: 5">
                 <li>
                     <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.year}}</a>
                 </li>
@@ -44,7 +47,7 @@
         </div>
     </div>
 
-    <div class="boxRight">
+    <div class="boxRight" ng-if="show">
         <div class="wineTopLink">
             <input type="text" ng-model="filter_wines" placeholder="Search"></input>
             <a class="btnAdd" href="#/Wines/New">Add New</a>

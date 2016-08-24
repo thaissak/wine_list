@@ -1,29 +1,34 @@
 app.controller('loginController', ['$scope', 'userFactory', '$location', '$cookies', function($scope, userFactory, $location, $cookies){
 
+	var pattern = /^(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{5,12}$/;
+
 	$scope.addUser = function(){
-		if($scope.newUser.password.length < 5){
-			console.log('less than 5');
-			$scope.error = "Password must have at least 5 characters";
-		}
-		else if($scope.newUser.password == $scope.newUser.confPwd){
-			userFactory.addUser($scope.newUser, function(data){
-				if(data.id){
-					$cookies.put('user_id', data.id);
-					// console.log("in adduser controller", "data:", data, "cookie:", $cookies.get('user_id'));
-					$location.path('/Home');
-				}
-				else if(data.email == true){
-					$scope.error = "E-mail already registered!";
-				}
-				else if(data.validation == false){
-					$scope.error = "There was an error creating your profile. Please try again.";
-				}
-				
-			})
+		console.log('pwds', $scope.newUser.password, $scope.newUser.confPwd);
+		if(pattern.test($scope.newUser.password)){
+			console.log('pwd validation ok');
+			if($scope.newUser.password == $scope.newUser.confPwd){
+				userFactory.addUser($scope.newUser, function(data){
+					if(data.id){
+						$cookies.put('user_id', data.id);
+						// console.log("in adduser controller", "data:", data, "cookie:", $cookies.get('user_id'));
+						$location.path('/Home');
+					}
+					else if(data.email == true){
+						$scope.error = "E-mail already registered!";
+					}
+					else if(data.validation == false){
+						$scope.error = "There was an error creating your profile. Please try again.";
+					}				
+				});
+			}
+			else{
+				console.log('validation:', $scope.newUser);
+				$scope.error = "Passwords don't match. Please try again!";
+			}
 		}
 		else{
-			console.log('validation:', $scope.newUser);
-			$scope.error = "Passwords don't match. Please try again!";
+			console.log('pwd nok');
+			$scope.error = "Password must have at least 5 alphanumeric characters";
 		}
 	};
 
@@ -38,7 +43,7 @@ app.controller('loginController', ['$scope', 'userFactory', '$location', '$cooki
 				console.log("login controller", "data:", data.id, "cookie:", $cookies.get('user_id'));
 				$location.path('/Home');
 			}
-		})
+		});
 	};
 
 	$scope.logout = function(){

@@ -47,11 +47,11 @@ function UsersController(){
 			else{
 				bcrypt.compare(req.body.password, data[0].password, function(err,success){
 					if(success){
-						console.log('login ok', data[0].id);
+						console.log('email and password match', data[0].id);
 						res.json({id:data[0].id});
 					}
 					else{
-						console.log('password not a match');
+						console.log('password is not a match');
 						res.json({validation: false});
 					}
 				});
@@ -93,18 +93,45 @@ function UsersController(){
 
 	this.changePwd = function(req,res){
 		console.log('change pwd controller', req.params.userId, req.body);
-		var myQuery = 'UPDATE users SET password = "'+req.body.newPwd+'", updated_at = NOW() WHERE id='+req.params.userId;
+		var myQuery = 'SELECT password FROM users WHERE id = "' +req.params.userId+ '" LIMIT 1';		
 		con.query(myQuery, function(err, data){
 			// console.log(con.query(myQuery));
-			if(err){
-				console.log('error changing password', err);
-				res.json({update: false});
+			if(err || data.length == 0){
+				console.log('login invalid', err);
+				res.json({userId: false});
 			}
 			else{
-				console.log('Changed Password in DB:', data);
-				res.json({update: true});
+				bcrypt.compare(req.body.oldPwd, data[0].password, function(err,success){
+					if(success){
+						console.log('passwords match');
+						bcrypt.hash(req.body.newPwd, saltRounds, function(err, hash){
+							if(err){
+								console.log('error hashing pwd', err);
+								res.json({password:false});
+							}
+							else{
+								var myQuery = 'UPDATE users SET password = "'+hash+'", updated_at = NOW() WHERE id='+req.params.userId;
+								con.query(myQuery, function(err, data){
+									// console.log(con.query(myQuery));
+									if(err){
+										console.log('error changing password', err);
+										res.json({update: false});
+									}
+									else{
+										console.log('Changed Password in DB:', data);
+										res.json({update: true});
+									}
+								});
+							}
+						});
+					}
+					else{
+						console.log('password is not a match');
+						res.json({validation: false});
+					}
+				});
 			}
-		});
+		});	
 	}
 
   

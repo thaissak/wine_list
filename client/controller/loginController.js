@@ -1,7 +1,11 @@
 app.controller('loginController', ['$scope', 'userFactory', '$location', '$cookies', function($scope, userFactory, $location, $cookies){
 
 	$scope.addUser = function(){
-		if($scope.newUser.password == $scope.newUser.confPwd){
+		if($scope.newUser.password.length < 5){
+			console.log('less than 5');
+			$scope.error = "Password must have at least 5 characters";
+		}
+		else if($scope.newUser.password == $scope.newUser.confPwd){
 			userFactory.addUser($scope.newUser, function(data){
 				if(data.id){
 					$cookies.put('user_id', data.id);

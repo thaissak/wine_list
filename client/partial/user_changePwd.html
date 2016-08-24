@@ -27,8 +27,12 @@
     <div class="pwdForm">
         <form>
             <label>
+                <span>Current Password:</span>
+                <input type="password" ng-model="user.oldPwd" required></input>
+            </label>
+            <label>
                 <span>New Password:</span>
-                <input type="password" ng-model="user.newPwd" name="password" ng-pattern="pwd" required></input>
+                <input type="password" ng-model="user.newPwd" required></input>
             </label>
             <label>
                 <span>Confirm New Password:</span>

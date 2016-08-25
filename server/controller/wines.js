@@ -4,9 +4,9 @@ function WinesController(){
   
 	this.addWine = function(req,res){
 		console.log(req.body);
-		var wine = {user_id: req.body.user_id, name: req.body.name, year: req.body.year, variety: req.body.variety, region: req.body.region, winery: req.body.winery, vintage: req.body.vintage, color: req.body.color, grape: req.body.grape, aroma: req.body.aroma, flavor: req.body.flavor, finish: req.body.finish, acidity: req.body.acidity, tannin: req.body.tannin, fruit: req.body.fruit, body: req.body.body, sweetness: req.body.sweetness, alcohol: req.body.alcohol, score: req.body.score, comment: req.body.comment, created_at: new Date()};
+		var wine = {user_id: req.body.user_id, name: req.body.name, year: req.body.year, variety: req.body.variety, region: req.body.region, winery: req.body.winery, vintage: req.body.vintage, score: req.body.score, comment: req.body.comment, created_at: new Date()};
+		// color: req.body.color, grape: req.body.grape, aroma: req.body.aroma, flavor: req.body.flavor, finish: req.body.finish, acidity: req.body.acidity, tannin: req.body.tannin, fruit: req.body.fruit, body: req.body.body, sweetness: req.body.sweetness, alcohol: req.body.alcohol,
 		con.query('INSERT INTO wines SET ?', wine, function(err,data){
-			// console.log(con.query(myQuery));
 			if(err){
 				console.log('error inserting new wine', err);
 				res.json({error:err});
@@ -44,7 +44,7 @@ function WinesController(){
 				res.json({validation: false});
 			}
 			else{
-				console.log('wine found', data);
+				console.log('wine found', data[0]);
 				res.json(data[0]);
 			}
 		});
@@ -67,10 +67,8 @@ function WinesController(){
 	},
 
 	this.updateWine = function(req,res){
-		console.log('user id:', req.params.userId, 'wine info:', req.body);
-		var myQuery = 'UPDATE wines SET name = "'+req.body.name+'", year = "'+req.body.year+'", variety = "'+req.body.variety+'", region = "'+req.body.region+'", winery = "'+req.body.winery+'", vintage = "'+req.body.vintage+'", color = "'+req.body.color+'", grape = "'+req.body.grape+'", aroma = "'+req.body.aroma+'", flavor = "'+req.body.flavor+'", finish = "'+req.body.finish+'", acidity = "'+req.body.acidity+'", tannin = "'+req.body.tannin+'", fruit = "'+req.body.fruit+'", body = "'+req.body.body+'", sweetness = "'+req.body.sweetness+'", alcohol = "'+req.body.alcohol+'", score = "'+req.body.score+'", comment = "'+req.body.comment+'", updated_at = NOW() WHERE id='+req.body.id;
-		con.query(myQuery, function(err, data){
-			// console.log(con.query(myQuery));
+		var wine = {name: req.body.name, year: req.body.year, variety: req.body.variety, region: req.body.region, winery: req.body.winery, vintage: req.body.vintage, score: req.body.score, comment: req.body.comment, updated_at: new Date()};
+		con.query('UPDATE wines SET ? WHERE id='+req.body.id, wine, function(err, data){
 			if(err){
 				console.log('wine not updated', err);
 				res.json({update: false});

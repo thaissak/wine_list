@@ -35,6 +35,8 @@ button{
 	border: none;
 	background-color: inherit;
 	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
 }
 
 /*-----------------GENERAL-----------------*/
@@ -47,6 +49,7 @@ h2{
 	font-weight: normal;
 	text-transform: uppercase;
 	text-align: center;
+	color: #190201;
 }
 
 /*h4 - Error msgs, profile fields(show and edit)*/
@@ -71,17 +74,21 @@ span{
 }
 
 button{
-	font-size: 1em;
+	font-size: 1.2em;
+    letter-spacing: 1px;
 	padding: 5px 10px;
-	background-color: #d3d3d3;
+	background-color: #190201;
+	color: #ffffff;
 	border-radius: 5px; 
 }
 
 /*anchor tag into button*/
 .btnBox a{
-	font-size: 1em;
+	font-size: 1.2em;
+	letter-spacing: 1px;
 	padding: 5px 10px;
-	background-color: #d3d3d3;
+	background-color: #190201;
+	color: #ffffff;
 	border-radius: 5px;
 }
 
@@ -98,14 +105,21 @@ button{
 form label{
 	display: block;
 	margin: 15px 0;
+	color: #190201;
+	font-size: 1.1em;
+}
+
+input:focus{
+	outline: none;
 }
 
 /*all forms*/
 form input{
 	font-size: 1.1em;
-	font-family: 'Architects Daughter';
-	letter-spacing: 2px;
+/*	font-family: 'Architects Daughter';
+*/	letter-spacing: 2px;
     margin-left: 2px;
+    color: #333333;
 }
 
 /*wines, wineries and lists*/
@@ -142,7 +156,7 @@ header h1{
 
 .logout{
 	margin-left: 95%;
-	color: #370006;
+	color: #270201;
 }
 
 .navbar ul{
@@ -157,81 +171,217 @@ header h1{
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: left;
-	color: #370006;
+	color: #270201;
 }
 
+/*-----------------MAIN PAGE-----------------*/
+
+.mainContent{
+	width: 70%;
+	margin: 0 15%;
+	background-image: url('/assets/images/corks.jpg');
+	background-size: 120%;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.mainContent h3{
+	color: white;
+	font-size: 1.6em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 10%;
+	margin: 0;
+	color: #270201;
+}
+
+.mainContent h4{
+	color: red;
+	font-size: 1.5em;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	text-align: center;
+	padding: 5% 0;
+	margin: 0;
+	color: #1A0003;
+}
+
+.mainContent span{
+	font-family: 'Denk One', Sans-Serif;
+	font-size: 1.5em;
+	color: #1A0003;
+}
+
+.mainContent p{
+	font-size: 1.4em;
+	text-align: center;
+	color: white;
+	margin: 0 0 0 10%;
+	width: 80%;
+	letter-spacing: 1px;
+	color: white;
+}
+
+
 /*-----------------LOGIN-----------------*/
+.wrapperLogin{
+	margin-top: 7%;
+	widows: 100%;
+}
 
 .loginForm{
-	width: 45%;
-	margin: 2% 40%;
+	width: 26%;
+	margin: 2% 37%;
 }
 
 .loginForm input{
-	width: 45%;
+	width: 100%;
 	display: block;
 	border-radius: 5px;
 	box-shadow: none;
 }
 
 .loginForm button{
-	margin-left: 36%;
+	margin-left: 81%;
 }
+
 
 /*-----------------REGISTRATION-----------------*/
+.wrapperRegister{
+	width: 100%;
+	margin-top: 3%;
+}
 
 .registerForm{
-	width: 41%;
-	margin: 2% 30%;
-}
-
-.registerForm input{
-	width: 65%;
-	border: none;
-	border-bottom: 1px solid black;
-}
-
-.registerForm button{
-	margin-left: 90%;
-}
-
-/*-----------------PROFILE-----------------*/
-
-.profile{
-	margin-bottom: 5%;
-}
-
-.profileForm{
 	width: 40%;
 	margin: 2% 30%;
 }
 
-.profileForm input{
-	width: 65%;
+.registerForm label{
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.registerForm input{
+	width: 100%;
 	border: none;
 	border-bottom: 1px solid black;
+	display: inline-block;
+	margin-top: 0;
 }
 
-.profileForm h4{
-	margin:0;
+.registerForm button{
+	margin-left: 89%;
+	margin-top: 5%;
 }
 
-.btnBox{
-	margin-left: 45%;
+/*-----------------HOME-----------------*/
+
+.wrapperHome{
+	width: 100%;
+	margin-top: 7%;
+}
+
+.wrapperHome h2{
+	text-transform: none;
+}
+
+/*-----------------PROFILE-----------------*/
+
+.wrapperProfile{
+	width: 100%;
+	margin: 5% 0 5% 0;
+	background-image: url('/assets/images/2Corks.jpg');
+	background-repeat: no-repeat;
+	background-size: 35%;
+	
+}
+
+.profileShow{
+	width: 26%;
+	margin: 2% 37%;
+}
+
+.profileShow span{
+	font-size: 1.1em;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	color: #1A0003;
+}
+
+.profileShow h4{
+	margin: 3% 2% 0 0;
+	letter-spacing: 2px;
+	font-size: 1.1em;
+	color: #333333;
+
+}
+
+.wrapperProfile .btnBox{
+	margin-left: 46%;
+}
+
+/*-----------------CHANGE PWD-----------------*/
+.wrapperChangePwd{
+	width: 100%;
+	margin-top: 6%; 
 }
 
 .pwdForm{
-	width: 45%;
-	margin: 2% 40%;
+	width: 24%;
+	margin: 2% 38%;
 }
 
 .pwdForm input{
-	width: 45%;
+	width: 100%;
 	display: block;
 	border-radius: 5px;
 	box-shadow: none;
 }
 
+.wrapperChangePwd .btnBox{
+	margin-left: 61%;
+}
+
+/*-----------------EDIT PROFILE-----------------*/
+.wrapperEditProfile{
+	width: 100%;
+	margin-top: 3%; 
+}
+
+.editProfileForm{
+	width: 34%;
+	margin: 3% 33%;
+}
+
+.editProfileForm span{
+	font-size: 1.1em;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	color: #1A0003;
+}
+
+.editProfileForm input, .editProfileForm h4{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid black;
+	display: inline-block;
+	margin: 1% 0 0 0;
+	padding-left: 1%;
+	letter-spacing: 2px;
+	font-size: 1.1em;
+	color: #333333;
+}
+
+.editProfileForm h4{
+	color: #a6a6a6;
+}
+
+.editProfileForm .btnBox{
+	margin-left: 69%;
+}
 
 /*-----------------WINES-----------------*/
 

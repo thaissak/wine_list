@@ -14,16 +14,18 @@
     </div>
 </header>
 
-<h2>Login</h2>
+<div class="wrapperLogin">
+    <h2>Login</h2>
 
-<h4 class="error_msg">{{ error }}</h4>
+    <h4 class="error_msg">{{ error }}</h4>
 
-<form class="loginForm">
-	<label>
-		E-mail:<input type="text" ng-model="userLogin.email">
-	</label>
-	<label>
-		Password:<input type="password" ng-model="userLogin.password">
-	</label>
-	<button type="submit" ng-click="login()">Login</button>
-</form>
+    <form class="loginForm">
+    	<label>
+    		E-mail:<input type="text" ng-model="userLogin.email">
+    	</label>
+    	<label>
+    		Password:<input type="password" ng-model="userLogin.password">
+    	</label>
+    	<button type="submit" ng-click="login()">Login</button>
+    </form>
+</div>

@@ -21,44 +21,43 @@
     </div>
 </header>
 
-<div class="profile">
-    <h2>Profile</h2>
-    <form>
-        <div class="profileForm">
-            <h4 class="error_msg">{{error}}</h4>
-            <input type="hidden" ng-model="user.id"></input>
-            <label>
-                <span>First Name:</span>
-                <input type="text" ng-model="user.firstName" required></input>
-            </label>
-            <label>
-                <span>Last Name:</span>
-                <input type="text" ng-model="user.lastName" required></input>
-            </label>
-            <label>                
-                <h4><span>E-mail:</span> {{ user.email }}</h4>
-            </label>
-            <label>
-                <span>Address:</span> 
-                <input type="text" ng-model="user.address"></input>
-            </label>
-            <label>
-                <span>City:</span>
-                <input type="text" ng-model="user.city"></input>
-            </label>
-            <label>
-                <span>State:</span>
-                <input type="text" ng-model="user.state" ng-minlength="2" ng-maxlength="2"></input>
-            </label>
-            <label>
-                <span>Favorite Wine:</span>
-                <input type="text" ng-model="user.favWine"></input>
-            </label>
-            <label>
-                <span>Favorite Winery:</span>
-                <input type="text" ng-model="user.favWinery"></input>
-            </label>
-        </div>
+<div class="wrapperEditProfile">
+    <h2>Edit Profile</h2>
+    <h4 class="error_msg">{{error}}</h4>
+    <form class="editProfileForm">
+        <input type="hidden" ng-model="user.id"></input>
+        <label>
+            <span>First Name:</span>
+            <input type="text" ng-model="user.firstName" required></input>
+        </label>
+        <label>
+            <span>Last Name:</span>
+            <input type="text" ng-model="user.lastName" required></input>
+        </label>
+        <label>                
+            <span>E-mail:</span> 
+            <h4>{{ user.email }}</h4>
+        </label>
+        <label>
+            <span>Address:</span> 
+            <input type="text" ng-model="user.address"></input>
+        </label>
+        <label>
+            <span>City:</span>
+            <input type="text" ng-model="user.city"></input>
+        </label>
+        <label>
+            <span>State:</span>
+            <input type="text" ng-model="user.state" ng-minlength="2" ng-maxlength="2"></input>
+        </label>
+        <label>
+            <span>Favorite Wine:</span>
+            <input type="text" ng-model="user.favWine"></input>
+        </label>
+        <label>
+            <span>Favorite Winery:</span>
+            <input type="text" ng-model="user.favWinery"></input>
+        </label>
         <div class="btnBox">
             <button type="submit" ng-click="updateUser()">Save</button>
             <a href="#/Profile">Cancel</a>

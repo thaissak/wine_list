@@ -6,8 +6,16 @@ app.controller('wineryController', ['$scope', 'wineryFactory', '$routeParams', '
 
 	wineryFactory.wineryInfo(userId, wineryId, function(wineryData){
 		console.log('getting one winery controller', 'user id:', userId, 'winery id:', wineryId, 'data:', wineryData);
-		$scope.winery = wineryData;
-
+		if(wineryData.visited_at == null){
+			wineryData.visited_at = '';
+			console.log('weird date', wineryData.visited_at);
+			$scope.winery = wineryData;
+		}
+		else{
+			wineryData.visited_at = new Date(wineryData.visited_at);
+			console.log('right date', wineryData.visited_at);
+			$scope.winery = wineryData;
+		}
 	});
 
 	$scope.deleteWinery = function(){

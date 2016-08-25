@@ -13,7 +13,6 @@ function UsersController(){
 				bcrypt.hash(req.body.password, saltRounds, function(err, hash){
 					var user = {firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, password: hash, address: req.body.address, city: req.body.city, state: req.body.state, favWine: req.body.favWine, favWinery: req.body.favWinery, created_at: new Date()};
 					con.query('INSERT INTO users SET ?', user, function(err,addData){
-						// console.log(con.query(myQuery));
 						if(err){
 							console.log('error inserting new user', err);
 							res.json(err);
@@ -76,10 +75,8 @@ function UsersController(){
 	},
 
 	this.updateUser = function(req,res){
-		console.log('update user', req.body);
-		var myQuery = 'UPDATE users SET firstName = "'+req.body.firstName+'", lastName = "'+req.body.lastName+'", address = "'+req.body.address+'",  city = "'+req.body.city+'", state = "'+req.body.state+'", favWine = "'+req.body.favWine+'", favWinery = "'+req.body.favWinery+'", updated_at = NOW() WHERE id='+req.body.id;
-		con.query(myQuery, function(err, data){
-			// console.log(con.query(myQuery));
+		var user = {firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, address: req.body.address, city: req.body.city, state: req.body.state, favWine: req.body.favWine, favWinery: req.body.favWinery, updated_at: new Date()};
+		con.query('UPDATE users SET ? WHERE id='+req.body.id, user, function(err, data){
 			if(err){
 				console.log('error updating user', err);
 				res.json({update: false});

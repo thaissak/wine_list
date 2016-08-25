@@ -21,43 +21,27 @@
     </div>
 </header>
 
-<div class="wrapper">
+<div class="wrapperShowWine">
     <h2>{{ wine.name }}</h2>
-    <div class="wineInfo">
+    <img src="/assets/images/wineBottles.jpg">
+    <div class="wineShow">
         <h4><span>Year:</span> {{ wine.year }}</h4>
         <h4><span>Variety:</span> {{ wine.variety }}</h4>
         <h4><span>Region:</span> {{ wine.region }}</h4>
         <h4><span>Winery:</span> {{ wine.winery }}</h4>
         <h4><span>Vintage:</span> {{ wine.vintage }}</h4>
 
-       <!--  <h3>General Characteristics</h3>
-            <h4><span>Color:</span> {{ wine.color }}</h4>
-            <h4><span>Grape:</span> {{ wine.grape }}</h4>
-            <h4><span>Aroma:</span> {{ wine.aroma }}</h4>
-            <h4><span>Flavor:</span> {{ wine.flavor }}</h4>
-            <h4><span>Finish:</span> {{ wine.finish }}</h4>
-
-
-        <h3>Taste Profile</h3>
-            <h4><span>Acidity:</span> {{ wine.acidity }}</h4> 
-            <h4><span>Tannin:</span> {{ wine.tannin }}</h4>
-            <h4><span>Fruit:</span> {{ wine.fruit }}</h4>
-            <h4><span>Body:</span> {{ wine.body }}</h4>
-            <h4><span>Sweetness:</span> {{ wine.sweetness }}</h4>
-            <h4><span>Alcohol:</span> {{ wine.alcohol }}</h4> -->
-
-
         <h3>Review</h3>
             <h4><span>Score:</span> {{ wine.score }}</h4> 
-            <h4><span>Comments:</span> {{ wine.comment }}</h4>
+            <h4><span>Comments:</span></h4> 
+            <h4 class="showComment">{{ wine.comment }}</h4>
+   
 
-    </div>
-        <div class="btnBox">  
-            <a href="#/Wines">Back</a>          
+        <div class="btnBox">             
             <a href="#/Wines/Edit/{{wine.id}}">Edit</a>
-            <form>
-               <button type="submit" ng-click="deleteWine()">Delete</button>
-            </form>
+            <button type="submit" ng-click="deleteWine()">Delete</button>
+            <a href="#/Wines">Back</a> 
         </div>
+    </div>
 </div>
 

@@ -21,117 +21,46 @@
     </div>
 </header>
 
-<div class="wrapper">
+<div class="wrapperAddWine">
     <h2>New Wine</h2>
+    
     <h4 class="error_msg">{{error}}</h4>
-    <div class="newWineForm">
-        <form>
+    
+    <form class="newWineForm">
         <input type="hidden" ng-model="newWine.user_id" value="{{userId}}"></input>
-            <label>
-                <span>Name:</span>
-                <input type="text" ng-model="newWine.name" required></input>
-            </label>
-            <label>
-                <span>Year:</span>
-                <input type="number" ng-model="newWine.year" required></input>
-            </label>
-            <label>
-                <span>Variety:</span> 
-                <input type="text" ng-model="newWine.variety" required></input>
-            </label>
-            <label>
-                <span>Region:</span>
-                <input type="text" ng-model="newWine.region"></input>
-            </label>
-            <label>
-                <span>Winery:</span>
-                <input type="text" ng-model="newWine.winery"></input>
-            </label>
-            <label>
-                <span>Vintage:</span><br>
-                <input type="radio" ng-model="newWine.vintage" value="yes">Yes</input>
-                <input type="radio" ng-model="newWine.vintage" value="no">No</input>               
-            </label>
 
-           <!--  <h3>General Characteristics</h3>
-                <label>
-                    <span>Color:</span>
-                    <input type="text" ng-model="newWine.color"></input>
-                </label>
-                <label>
-                    <span>Grape:</span>
-                    <input type="text" ng-model="newWine.grape"></input>
-                </label>
-                <label>
-                    <span>Aroma:</span>
-                    <input type="text" ng-model="newWine.aroma"></input>
-                </label>
-                <label>
-                    <span>Flavor:</span>
-                    <input type="text" ng-model="newWine.flavor"></input>
-                </label>
-                <label>
-                    <span>Finish:</span>
-                    <input type="text" ng-model="newWine.finish"></input>
-                </label>
+        <label>Name:</label>
+        <input type="text" ng-model="newWine.name" required></input>
 
-            <h3>Taste Profile</h3>
-                <label>
-                    <span>Acidity:</span> 
-                    Low<input type="radio" ng-model="newWine.acidity" value="0"></input>
-                    <input type="radio" ng-model="newWine.acidity" value="1"></input>
-                    <input type="radio" ng-model="newWine.acidity" value="2"></input>
-                    <input type="radio" ng-model="newWine.acidity" value="3"></input>
-                    <input type="radio" ng-model="newWine.acidity" value="4"></input>High
-                </label>
-                <label>
-                    <span>Tannin:</span><br>
-                    Weak<input type="radio" ng-model="newWine.tannin" value="0"></input>
-                    <input type="radio" ng-model="newWine.tannin" value="1"></input>
-                    <input type="radio" ng-model="newWine.tannin" value="2"></input>
-                    <input type="radio" ng-model="newWine.tannin" value="3"></input>
-                    <input type="radio" ng-model="newWine.tannin" value="4"></input>Strong
-                </label>
-                <label>
-                    <span>Fruit:</span>
-                    <input type="text" ng-model="newWine.fruit"></input>
-                </label>
-                <label>
-                    <span>Body:</span><br>
-                    Light<input type="radio" ng-model="newWine.body" value="0"></input>
-                    <input type="radio" ng-model="newWine.body" value="1"></input>
-                    <input type="radio" ng-model="newWine.body" value="2"></input>
-                    <input type="radio" ng-model="newWine.body" value="3"></input>
-                    <input type="radio" ng-model="newWine.body" value="4"></input>Full
-                </label>
-                <label>
-                    <span>Sweetness:</span><br>
-                    Low<input type="radio" ng-model="newWine.sweetness" value="0"></input>
-                    <input type="radio" ng-model="newWine.sweetness" value="1"></input>
-                    <input type="radio" ng-model="newWine.sweetness" value="2"></input>
-                    <input type="radio" ng-model="newWine.sweetness" value="3"></input>
-                    <input type="radio" ng-model="newWine.sweetness" value="4"></input>High
-                </label>
-                <label>
-                    <span>Alcohol:</span><br>
-                    Low<input type="radio" ng-model="newWine.alcohol" value="0"></input>
-                    <input type="radio" ng-model="newWine.alcohol" value="1"></input>
-                    <input type="radio" ng-model="newWine.alcohol" value="2"></input>
-                    <input type="radio" ng-model="newWine.alcohol" value="3"></input>
-                    <input type="radio" ng-model="newWine.alcohol" value="4"></input>High
-                </label>
- -->
-            <h3>Review</h3>
-                <label>
-                    <span>Score:</span> 
-                    <input type="number" max="5" ng-model="newWine.score"></input>
-                </label>
-                <label>
-                    <span>Comments:</span>
-                    <input type="text" ng-model="newWine.comment"></input>
-                </label>
-
+        <div class="wrapYear">
+            <label class="yearLabel">Year:</label>
+            <input class="yearInput" type="number" ng-model="newWine.year" required></input>
         </div>
+        
+        <div class="wrapVariety">
+            <label class="varietyLabel">Variety:</label> 
+            <input class="varietyInput" type="text" ng-model="newWine.variety" required></input>
+        </div>
+        
+        <label>Region:</label>
+        <input type="text" ng-model="newWine.region"></input>
+        
+        <label>Winery:</label>
+        <input type="text" ng-model="newWine.winery"></input>
+        
+        <label class="vintage">Vintage:</label>
+        <div class="wrapVintage">
+            <input type="radio" ng-model="newWine.vintage" value="yes">Yes</input>
+            <input type="radio" ng-model="newWine.vintage" value="no">No</input> 
+        </div>                         
+
+        <h3>Review</h3>
+            <label class="scoreLabel">Score:</label> 
+                <input class="scoreInput" type="number" min="0" max="5" ng-model="newWine.score"></input>
+            
+            <label>Comments:</label>
+                <textarea rows="4" type="text" ng-model="newWine.comment"></textarea>
+                
         <div class="btnBox">
             <button type="submit" ng-click="addWine()">Save</button>
             <a href="#/Wines">Cancel</a>

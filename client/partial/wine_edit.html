@@ -21,98 +21,48 @@
     </div>
 </header>
 
-<div class="wrapper">
+<div class="wrapperEditWine">
     <h2>Edit Wine</h2>
+
     <h4 class="error_msg">{{error}}</h4>
-    <div class="editWineForm">
-        <form>
-            <label>
-                <span>Name: </span>
-                <input type="text" ng-model="wine.name" required></input>
-            </label>
-            <label>
-                <span>Year: </span>
-                <input type="number" ng-model="wine.year" required></input>
-            </label>
-            <label>
-                <span>Variety:  </span> 
-                <input type="text" ng-model="wine.variety" required></input>
-            </label>
-            <label>
-                <span>Region: </span>
-                <input type="text" ng-model="wine.region"></input>
-            </label>
-            <label>
-                <span>Winery: </span>
-                <input type="text" ng-model="wine.winery"></input>
-            </label>
-            <label>
-                <span>Vintage:  </span>
-                <input type="text" ng-model="wine.vintage"></input>
-            </label>
 
-           <!--  <h3>General Characteristics</h3>
-                <label>
-                    <span>Color: </span>
-                    <input type="text" ng-model="wine.color" value="{{wine.color}}"></input>
-                </label>
-                <label>
-                    <span>Grape: </span>
-                    <input type="text" ng-model="wine.grape" value="{{wine.grape}}"></input>
-                </label>
-                <label>
-                    <span>Aroma: </span>
-                    <input type="text" ng-model="wine.aroma" value="{{wine.aroma}}"></input>
-                </label>
-                <label>
-                    <span>Flavor: </span>
-                    <input type="text" ng-model="wine.flavor" value="{{wine.flavor}}"></input>
-                </label>
-                <label>
-                    <span>Finish: </span>
-                    <input type="text" ng-model="wine.finish" value="{{wine.finish}}"></input>
-                </label>
+    <form class="editWineForm">
+        <label>Name:</label>
+        <input type="text" ng-model="wine.name" required></input>
 
-            <h3>Taste Profile</h3>
-                <label>
-                    <span>Acidity:  </span> 
-                    <input type="text" ng-model="wine.acidity" value="{{wine.acidity}}"></input>
-                </label>
-                <label>
-                    <span>Tannin: </span>
-                    <input type="text" ng-model="wine.tannin" value="{{wine.tannin}}"></input>
-                </label>
-                <label>
-                    <span>Fruit: </span>
-                    <input type="text" ng-model="wine.fruit" value="{{wine.fruit}}"></input>
-                </label>
-                <label>
-                    <span>Body: </span>
-                    <input type="text" ng-model="wine.body" value="{{wine.body}}"></input>
-                </label>
-                <label>
-                    <span>Sweetness: </span>
-                    <input type="text" ng-model="wine.sweetness" value="{{wine.sweetness}}"></input>
-                </label>
-                <label>
-                    <span>Alcohol:  </span>
-                    <input type="text" ng-model="wine.alcohol" value="{{wine.alcohol}}"></input>
-                </label> -->
-
-            <h3>Review</h3>
-                <label>
-                    <span>Score: </span> 
-                    <input type="number" max="5" ng-model="wine.score"></input>
-                </label>
-                <label>
-                    <span>Comments:  </span>
-                    <input type="text" ng-model="wine.comments"></input>
-                </label>
+        <div class="wrapYear">
+            <label class="yearLabel">Year:</label>
+            <input class="yearInput" type="number" ng-model="wine.year" required></input>
         </div>
+
+        <div class="wrapVariety">
+            <label class="varietyLabel">Variety:</label> 
+            <input class="varietyInput" type="text" ng-model="wine.variety" required></input>
+        </div>
+
+        <label>Region:</label>
+        <input type="text" ng-model="wine.region"></input>
+
+        <label>Winery:</label>
+        <input type="text" ng-model="wine.winery"></input>
+
+        <label class="vintage">Vintage:</label>
+        <div class="wrapVintage">
+            <input type="radio" ng-model="wine.vintage" value="yes">Yes</input>
+            <input type="radio" ng-model="wine.vintage" value="no">No</input>
+        </div>
+
+        <h3>Review</h3>
+            <label class="scoreLabel">Score:</label> 
+            <input class="scoreInput" type="number" max="5" ng-model="wine.score"></input>
+
+            <label>Comments:</label>
+            <textarea type="text" ng-model="wine.comments"></textarea>
+
         <div class="btnBox">
+            <a href="#/Wines/Show/{{wine.id}}">Back</a>
             <button type="submit" ng-click="updateWine()">Save</button>
             <a href="#/Wines">Cancel</a>
-            <a href="#/Wines/Show/{{wine.id}}">Back</a>
         </div>
     </form>
 </div>

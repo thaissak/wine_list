@@ -24,11 +24,16 @@
 <div class="wrapperHomeWine">
     <h2>Wines</h2>
 
-    <div class="topLinks">
-        <input  ng-if="show" type="text" ng-model="filter_wines" placeholder="Search"></input>
-        <a class="btnAdd" href="#/Wines/New">Add New</a>
-        <h3>{{msg}}</h3>
+    <div class="topLinksShow" ng-if="show">
+        <input type="text" ng-model="filter_wines" placeholder="Search"></input>
+        <a class="btnAdd" href="#/Wines/New">Add New</a>       
     </div>
+
+    <div class="topLinksMsg" ng-if="msg">
+        <h3>{{msg}}</h3>
+        <a class="btnAdd" href="#/Wines/New">Start Adding!</a>
+    </div>
+
 
     <div class="boxLeft" ng-if="show">
         <div class="recentList">

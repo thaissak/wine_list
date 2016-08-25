@@ -21,54 +21,44 @@
     </div>
 </header>
 
-<div class="wrapper">
+<div class="wrapperAddWinery">
     <h2>New Winery</h2>
-    <h4 class="error_msg">{{error}}</h4>
-    <div class="newWineryForm">
-        <form>
-            <label>
-                <span>Name:</span>
-                <input type="text" ng-model="newWinery.name" required></input>
-            </label>
-            <label>
-                <span>Region:</span>
-                <input type="year" ng-model="newWinery.region" required></input>
-            </label>
-            <label>
-                <span>City:</span> 
-                <input type="text" ng-model="newWinery.city"></input>
-            </label>
-            <label>
-                <span>State:</span>
-                <input type="text" ng-model="newWinery.state"></input>
-            </label>
-            <label>
-                <span>Country:</span>
-                <input type="text" ng-model="newWinery.country"></input>
-            </label>
-            <label>
-                <span>Specialty:</span>
-                <input type="text" ng-model="newWinery.specialty"></input>
-            </label>
-            <label>
-                <span>Visited in:</span>
-                <input type="date" ng-model="newWinery.visited_at"></input>
-            </label>
 
-            <h3>Review</h3>
-                <label>
-                    <span>Score:</span> 
-                    <input type="number" max="5" ng-model="newWinery.score"></input>
-                </label>
-                <label>
-                    <span>Comments:</span>
-                    <input type="text" ng-model="newWinery.comment"></input>
-                </label>
-    </div>
+    <h4 class="error_msg">{{error}}</h4>
+
+    <form class="newWineryForm">
+        <label>Name:</label>
+        <input type="text" ng-model="newWinery.name" required></input>
+
+        <label>Region:</label>
+        <input type="year" ng-model="newWinery.region" required></input>
+
+        <label>City:</label> 
+        <input type="text" ng-model="newWinery.city"></input>
+
+        <label>State:</label>
+        <input type="text" ng-model="newWinery.state"></input>
+
+        <label>Country:</label>
+        <input type="text" ng-model="newWinery.country"></input>
+
+        <label>Specialty:</label>
+        <input type="text" ng-model="newWinery.specialty"></input>
+
+        <label>Visited in:</label>
+        <input type="date" ng-model="newWinery.visited_at"></input>
+
+        <h3>Review</h3>
+        <label class="scoreLabel">Score:</label> 
+        <input class="scoreInput" type="number" min="0" max="5" ng-model="newWinery.score"></input>
+
+        <label>Comments:</label>
+        <textarea rows="4" type="text" ng-model="newWinery.comment"></textarea>
+
         <div class="btnBox">
             <button type="submit" ng-click="addWinery()">Save</button>
             <a href="#/Wineries">Cancel</a>
         </div>
-        </form>
+    </form>
 </div>
 

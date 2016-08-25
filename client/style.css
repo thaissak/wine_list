@@ -431,16 +431,34 @@ header h1{
 	margin-bottom: 4%;
 }
 
-.topLinks{
+.topLinksShow{
 	width: 40%;
 	margin: 0% 10% 3% 50%;
 }
 
-.toLinks a{
+.topLinksShow a{
 	display: inline-block;
 }
 
-.topLinks h3{
+.topLinksShow input{
+	display: inline-block;
+	font-size: 1em;
+	width: 50%;
+	margin-right: 1%;
+	border-radius: 5px;
+
+}
+
+.wrapperHomeWine .topLinksMsg{
+	width: 100%;
+}
+
+.wrapperHomeWine .topLinksMsg a{
+	margin: 0% 45%;
+}
+
+/*used for winery too*/
+.topLinksMsg h3{
 	font-size: 1.2em;
 	color: #270201;
 	text-align: center;
@@ -448,13 +466,10 @@ header h1{
 	margin-top: 3%;
 }
 
-.topLinks input{
-	display: inline-block;
-	font-size: 1em;
+.topLinksMsg img{
 	width: 50%;
-	margin-right: 1%;
-	border-radius: 5px;
-
+	display: inline-block;
+	position: relative;
 }
 
 .boxLeft{
@@ -486,12 +501,6 @@ header h1{
 	border-radius: 5px;
 	display: inline-block;
 	vertical-align: top;
-}
-
-
-
-ul{
-	width: 100%;
 }
 
 
@@ -719,10 +728,14 @@ ul{
  	margin: -1% 1%;
  }
 
-/*-----------------WINERIES-----------------*/
+/*-----------------HOME WINERIES-----------------*/
+.wrapperHomeWinery{
+	width: 100%;
+	margin-top: 5%;
+}
 
-.wineryAdd{
-	margin-left: 88%;
+.wrapperHomeWinery .wineryAdd{
+	margin-left: 75%;
 }
 
 .wineryList{
@@ -748,28 +761,174 @@ ul{
 
 }
 
-.maps{
-	display: inline-block;
-	vertical-align: top;
-	width: 50%;
+.wrapperHomeWinery .topLinksMsg{
+	width: 100%;
 }
 
-.maps img{
-	width: 70%;
+.wrapperHomeWinery .topLinksMsg a{
+	margin: 0% 45%;
 }
 
-.newWineryForm input, .editWineryForm input{
-	width: 65%;
+
+/*-----------------ADD WINERIES-----------------*/
+
+.wrapperAddWinery{
+	width: 100%;
+	margin-top: 3%;
+}
+
+.newWineryForm{
+	width: 40%;
+	margin: 3% 30%;	
+}
+
+.newWineryForm label{
+	margin-bottom: 0;
+}
+
+.newWineryForm input{
+	width: 99%;
 	border: none;
 	border-bottom: 1px solid black;
 }
 
-.newWineryForm, .wineryShow, .editWineryForm{
-	width: 60%;
-	margin: 3% 20%;
+.newWineryForm h3{
+	font-size: 1.3em;
+	letter-spacing: 1px;
+	margin-top: 10%;
+	margin-bottom: 1%;
+}
+
+.newWineryForm .scoreLabel{
+	display: inline-block;
+	width: 8%;
+}
+
+.newWineryForm .scoreInput{
+	display: inline-block;
+	width: 10%;
+	text-align: center;
 }
 
 
+.wrapperAddWinery .btnBox{
+	margin-left: 73%;
+	margin-top: 5%; 
+}
+
+.wrapperAddWinery .btnBox button{
+ 	margin: -1% 1%;
+ }
+
+
+/*-----------------SHOW WINERIES-----------------*/
+
+.wrapperShowWinery{
+	width: 100%;
+	margin-top: 3%;
+	bottom: 0;
+	height: 100%;
+}
+
+.wrapperShowWinery img{
+	width: 20%;
+	display: inline-block;
+	margin-left: 5%;
+	vertical-align: bottom;
+	bottom: 0;
+}
+
+.wineryShow{
+	display: inline-block;
+	width: 30%;
+	margin: 0% 32% 2% 12%;	
+}
+
+.wineryShow h3{
+	font-size: 1.3em;
+	letter-spacing: 1px;
+	margin-top: 8%;
+	margin-bottom: 1%;
+}
+
+.wineryShow span{
+	font-size: 1.1em;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	color: #1A0003;
+}
+
+.wineryShow h4{
+	margin: 3% 2% 0 0;
+	letter-spacing: 2px;
+	font-size: 1.1em;
+	color: #333333;
+}
+
+.wineryShow .showComment{
+	margin-top: 1%;
+}
+
+.wrapperShowWinery .btnBox{
+ 	margin-left: 50%;
+ 	margin-top: 2%;
+ }
+
+.wrapperShowWinery .btnBox button{
+ 	margin: -1% 1%;
+ }
+
+
+/*-----------------EDIT WINERIES-----------------*/
+
+.wrapperEditWinery{
+	width: 100%;
+	margin-top: 3%;
+}
+
+.editWineryForm{
+	width: 40%;
+	margin: 3% 30%;
+	
+}
+
+.editWineryForm label{
+	margin-bottom: 0;
+}
+
+.editWineryForm input{
+	width: 99%;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.editWineryForm h3{
+	font-size: 1.3em;
+	letter-spacing: 1px;
+	margin-top: 8%;
+	margin-bottom: 1%;
+}
+
+.editWineryForm .scoreLabel{
+	display: inline-block;
+	width: 8%;
+}
+
+.editWineryForm .scoreInput{
+	display: inline-block;
+	width: 10%;
+	text-align: center;
+}
+
+
+.wrapperEditWinery .btnBox{
+	margin-left: 61%;
+	margin-top: 5%; 
+}
+
+.wrapperEditWinery .btnBox button{
+ 	margin: -1% 1%;
+ }
 
 
 

@@ -21,9 +21,12 @@
     </div>
 </header>
 
-<div class="wrapper">
+<div class="wrapperShowWinery">
     <h2>{{ winery.name }}</h2>
-    <div class="wineryInfo">
+
+    <img src="/assets/images/wineTasting.jpg">
+
+    <div class="wineryShow">
         <h4><span>Region:</span>{{ winery.region }}</h4>
         <h4><span>City:</span>{{ winery.city }}</h4>
         <h4><span>State:</span>{{ winery.state }}</h4>
@@ -32,15 +35,14 @@
         <h4><span>Visited in:</span>{{ winery.visited_at | date:'MM/dd/yyyy' }}</h4>
 
         <h3>Review</h3>
-            <h4><span>Score:</span>{{ winery.score }}</h4> 
-            <h4><span>Comments:</span>{{ winery.comment }}</h4>
+        <h4><span>Score:</span>{{ winery.score }}</h4> 
+        <h4><span>Comments:</span>{{ winery.comment }}</h4>
     </div>
-        <div class="btnBox">  
-            <a href="#/Wineries">Back</a>          
-            <a href="#/Wineries/Edit/{{winery.id}}">Edit</a>
-            <form>
-                <button type="submit" ng-click="deleteWinery()">Delete</button>
-            </form>
-        </div>
+
+    <div class="btnBox">                 
+        <a href="#/Wineries/Edit/{{winery.id}}">Edit</a>
+        <button type="submit" ng-click="deleteWinery()">Delete</button>
+        <a href="#/Wineries">Back</a> 
+    </div>
 </div>
 

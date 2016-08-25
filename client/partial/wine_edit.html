@@ -53,11 +53,11 @@
         </div>
 
         <h3>Review</h3>
-            <label class="scoreLabel">Score:</label> 
-            <input class="scoreInput" type="number" max="5" ng-model="wine.score"></input>
+        <label class="scoreLabel">Score:</label> 
+        <input class="scoreInput" type="number" min="0" max="5" ng-model="wine.score"></input>
 
-            <label>Comments:</label>
-            <textarea type="text" ng-model="wine.comments"></textarea>
+        <label>Comments:</label>
+        <textarea type="text" ng-model="wine.comments"></textarea>
 
         <div class="btnBox">
             <a href="#/Wines/Show/{{wine.id}}">Back</a>

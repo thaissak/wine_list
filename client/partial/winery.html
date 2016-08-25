@@ -21,22 +21,26 @@
     </div>
 </header>
 
-<div class="wrapper">
+<div class="wrapperHomeWinery">
     <h2>Wineries</h2>
-    <h4>{{msg}}</h4>
-    <a class="btnAdd wineryAdd" href="#/Wineries/New">Add New</a>
 
-        <div class="wineryList" ng-if="show">
-            <ul ng-repeat="winery in wineries | orderBy:'name'">
-                <li class="wineryBox">
-                    <div class="inBoxLeft">
-                        <a href="#/Wineries/Show/{{winery.id}}">{{winery.name}}</a>
-                        <h4>{{ winery.region }}, {{ winery.state }}</h4>
-                    </div>
-                    <div class="maps"><img src="assets/images/map.png"></div>
-                </li>
-            </ul>
-        </div>
+    <div class="topLinksMsg" ng-if="msg">
+        <h3>{{msg}}</h3>
+        <a class="btnAdd" href="#/Wineries/New">Start Adding!</a>
+    </div>
+
+    <a class="btnAdd wineryAdd" ng-if="show" href="#/Wineries/New">Add New</a>
+
+    <div class="wineryList" ng-if="show">
+        <ul ng-repeat="winery in wineries | orderBy:'name'">
+            <li class="wineryBox">
+                <div class="inBoxLeft">
+                    <a href="#/Wineries/Show/{{winery.id}}">{{winery.name}}</a>
+                    <h4>{{ winery.region }}, {{ winery.state }}</h4>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 </div>
 

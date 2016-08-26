@@ -1,7 +1,5 @@
 var express = require('express');
 
-var bcrypt = require('bcrypt');
-
 path = require('path');
 
 app = express();

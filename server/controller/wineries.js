@@ -4,7 +4,7 @@ function WineriesController(){
   
 	this.addWinery = function(req,res){
 		console.log(req.body);
-		var winery = {name: req.body.name, region: req.body.region, city: req.body.city, state: req.body.state, country: req.body.country, specialty: req.body.specialty, visited_at: req.body.visited_at, score: req.body.score, comment: req.body.comment, user_id: req.body.user_id, created_at: new Date()};
+		var winery = {name: req.body.name, region: req.body.region, city: req.body.city, state: req.body.state, country: req.body.country, specialty: req.body.specialty, score: req.body.score, comment: req.body.comment, user_id: req.body.user_id, created_at: new Date()};
 		con.query('INSERT INTO wineries SET ?', winery, function(err,data){
 			if(err){
 				console.log('error inserting new winery', err);
@@ -66,7 +66,7 @@ function WineriesController(){
 	},
 
 	this.updateWinery = function(req,res){
-		var winery = {name: req.body.name, region: req.body.region, city: req.body.city, state: req.body.state, country: req.body.country, specialty: req.body.specialty, visited_at: req.body.visited_at, score: req.body.score, comment: req.body.comment, user_id: req.body.user_id, updated_at: new Date()};
+		var winery = {name: req.body.name, region: req.body.region, city: req.body.city, state: req.body.state, country: req.body.country, specialty: req.body.specialty, score: req.body.score, comment: req.body.comment, user_id: req.body.user_id, updated_at: new Date()};
 		con.query('UPDATE wineries SET ? WHERE id='+req.body.id, winery, function(err, data){
 			if(err){
 				console.log('winery not updated', err);

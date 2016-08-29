@@ -23,45 +23,34 @@
 
 <div class="wrapperHomeWine">
     <h2>Wines</h2>
+        
+    <a class="btnAdd" ng-if="show" href="#/Wines/New">Add New</a>       
 
-    <div class="topLinksShow" ng-if="show">
-        <input type="text" ng-model="filter_wines" placeholder="Search"></input>
-        <a class="btnAdd" href="#/Wines/New">Add New</a>       
-    </div>
-
-    <div class="topLinksMsg" ng-if="msg">
+    <div class="topMsg" ng-if="msg">
         <h3>{{msg}}</h3>
         <a class="btnAdd" href="#/Wines/New">Start Adding!</a>
     </div>
 
 
-    <div class="boxLeft" ng-if="show">
-        <div class="recentList">
-            <h3>Recently Added</h3>
-            <ul ng-repeat="wine in wines | limitTo: 5">
-                <li>
+    <div class="wrapperBox" ng-if="show">
+        <div class="boxRecent">
+            <h3>You recently added:</h3>
+            <ul>
+                <li ng-repeat="wine in wines | limitTo: 3">
                     <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.year}}</a>
                 </li>
             </ul>
         </div>
 
-        <div class="favList">
-            <h3>Your Favorites</h3>
-            <ul ng-repeat="wine in wines | limitTo: 3">
-                <li>
-                    <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.score}}</a>
+        <div class="boxAll" ng-if="show">
+            <h3>All Wines</h3>
+            <input type="text" ng-model="filter_wines" placeholder="Search"></input>
+            <ul>
+                <li ng-repeat="wine in wines | orderBy:'name' | filter: filter_wines">
+                    <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.variety}}, {{wine.year}} from {{wine.winery}}</a>
                 </li>
             </ul>
         </div>
-    </div>
-
-    <div class="boxRight" ng-if="show">
-        <h3>All Wines</h3>
-        <ul ng-repeat="wine in wines | orderBy:'name' | filter: filter_wines">
-            <li>
-                <a href="#/Wines/Show/{{wine.id}}">{{wine.name}}, {{wine.variety}}, {{wine.year}} from {{wine.winery}}</a>
-            </li>
-        </ul>
     </div>
 </div>
 

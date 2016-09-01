@@ -135,7 +135,7 @@ h1{
 	font-size: 3em;
 	letter-spacing: 2px;
 	margin-left: 2%;
-	width: 18%;
+	width: 20%;
 	color: #1A0003;
 }
 
@@ -144,20 +144,27 @@ header h1{
 
 }
 
+.mainHeader .navbar{
+	display: inline-block;
+    float: right;
+    width: 78%;
+}
+
+.navbar ul{
+	text-align: right;
+    margin-right: 2%;
+}
+
 .linksTop{
 	display: inline-block;
-	width: 79%;
+	width: 77%;
 
 }
 
 .logout{
-	margin-left: 95%;
+	margin-left: 92%;
+	margin-right: 2%;
 	color: #270201;
-}
-
-.navbar ul{
-	width: 33%;
-	margin-left: 68%;
 }
 
 .navbar ul li{
@@ -170,17 +177,20 @@ header h1{
 	color: #270201;
 }
 
+
+
 /*-----------------MAIN PAGE-----------------*/
 
 .mainContent{
 	width: 100%;
 	margin: 0 ;
 	background-image: url('/assets/images/corks.jpg');
-	background-size: 120%;
+	background-size: 100%;
 	background-repeat: no-repeat;
 	position: absolute;
 	bottom:0;
-}
+/*	max-height: 500px;
+*/}
 
 .mainContent h3{
 	color: white;
@@ -188,7 +198,7 @@ header h1{
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-align: center;
-	padding-top: 10%;
+	padding-top: 5%;
 	margin: 0;
 	color: #270201;
 }
@@ -220,6 +230,10 @@ header h1{
 	color: white;
 	padding-bottom: 10%;
 	line-height: 1.6em;
+}
+
+#mainHeader{
+	clear: ;
 }
 
 
@@ -300,7 +314,7 @@ header h1{
 }
 
 .wrapperHome p{
-	padding: 2% 5% 25% 5%;
+	padding: 0% 5% 25% 5%;
 	letter-spacing: 1.5px;
 	line-height: 1.5em;
 	text-align: center;
@@ -373,11 +387,11 @@ header h1{
 }
 
 .wrapperChangePwd .btnBox{
-	margin-left: 60%;
+	margin-left: 57%;
 }
 
 .wrapperChangePwd .btnBox button{
- 	margin: -1% 1%;
+ 	margin: -2% 1%;
  }
 
 /*-----------------EDIT PROFILE-----------------*/
@@ -412,12 +426,13 @@ header h1{
 }
 
 .editProfileForm .btnBox{
-	margin-left: 68%;
-	margin-top: 3%;
+	margin-left: 65%;
+    margin-top: 5%;
+    width: 35%;
 }
 
 .wrapperEditProfile .btnBox button{
- 	margin: -1% 1%;
+ 	margin: -2% 1%;
  }
 
 /*-----------------HOME WINES-----------------*/
@@ -432,11 +447,11 @@ header h1{
 }
 
 .wrapperHomeWine .btnAdd{
-	margin: 0% 30% 3% 63%;
+	margin: 0% 0% 3% 62%;
 }
 
 .wrapperHomeWine .topMsg a{
-	margin: 0% 45%;
+	margin: 0% 44%;
 }
 
 .topMsg{
@@ -444,10 +459,10 @@ header h1{
 	margin: 0; 
 	bottom:0;
 	background-image: url('assets/images/wine01.jpg');
-	background-size: 25%;
+	background-size: 29%;
 	background-repeat: no-repeat;
 	background-position: bottom;
-	height: 440px;
+	height: 380px;
 }
 
 .topMsg h3{
@@ -491,7 +506,7 @@ header h1{
 .boxAll{
 	padding: 2% 0%;
 	margin-bottom: 3%;
-	border-top: 3px solid #1A0003;
+	border-top: 2px solid #1A0003;
 }
 
 .boxAll input{
@@ -504,8 +519,7 @@ header h1{
 .boxAll h3{
 	display: inline-block;
 	letter-spacing: 1.5px;
-	margin-right: 2%;
-	margin-left: 30%;
+	margin-right: 30%;
 	text-align: center;
 	font-size: 1.3em;
 }
@@ -602,7 +616,7 @@ header h1{
 
 
 .wrapperAddWine .btnBox{
-	margin-left: 73%;
+	margin-left: 70%;
 	margin-top: 5%; 
 }
 
@@ -659,7 +673,7 @@ header h1{
 }
 
 .wrapperShowWine .btnBox{
- 	margin-left: 50%;
+ 	margin-left: 45%;
  	margin-top: 5%;
  }
 
@@ -725,7 +739,7 @@ header h1{
 
 
 .wrapperEditWine .btnBox{
-	margin-left: 61%;
+	margin-left: 57%;
 	margin-top: 5%; 
 }
 
@@ -792,13 +806,13 @@ header h1{
 }
 
 .wrapperHomeWinery .topMsg{
-	width: 80%;
-	margin: 2% 10%;
-	background-image: url('assets/images/wine_map.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	bottom: 0;
-	min-height: 500px;
+	width: 94%;
+    margin: 0% 3% 2% 3%;
+    background-image: url('assets/images/wine_map.png');
+    background-size: 72%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    min-height: 395px;
 }
 
 .wrapperHomeWinery .topMsg a{
@@ -857,7 +871,7 @@ header h1{
 
 
 .wrapperAddWinery .btnBox{
-	margin-left: 73%;
+	margin-left: 70%;
 	margin-top: 5%; 
 }
 
@@ -968,7 +982,7 @@ header h1{
 
 
 .wrapperEditWinery .btnBox{
-	margin-left: 61%;
+	margin-left: 57%;
 	margin-top: 5%; 
 }
 
